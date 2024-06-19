@@ -14,7 +14,7 @@ public abstract class Enemy : MonoBehaviour
     public abstract void Action();
     public abstract void Idle();
 
-    protected virtual void Update()
+    public virtual void Update()
     {
         if (playerDetectionHandler != null && playerDetectionHandler.IsPlayerInRange(transform.position))
         {
