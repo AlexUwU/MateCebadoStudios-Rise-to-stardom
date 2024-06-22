@@ -22,7 +22,6 @@ public class DispararJugador : MonoBehaviour
 
     private void Update()
     {
-        Vector3 inputMovement = inputHandler.GetInputMovement();
         Vector3 pointerTargetPosition = pointer.position;
         firepointHandler.Aim(pointerTargetPosition);
 

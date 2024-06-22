@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 5125583551256013628}
   - component: {fileID: 5125583551256013629}
   - component: {fileID: 5125583551256013616}
-  - component: {fileID: 706208420866182890}
   - component: {fileID: 5125583551256013617}
   - component: {fileID: 6668841551572532365}
   - component: {fileID: 920894320516977451}
@@ -151,23 +150,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &706208420866182890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5125583551256013626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3153334533e986b498037a74abd43bf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Salud: 100
-  Velocidad: 5
-  Dmg: 10
-  Tempo: 0.2
-  VelProyectil: 4
 --- !u!114 &5125583551256013617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,7 +162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7352144ca48df14c824950cbcd1b6f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  Salud: 100
+  Velocidad: 5
+  Dmg: 10
+  Tempo: 0.2
+  VelProyectil: 4
 --- !u!114 &6668841551572532365
 MonoBehaviour:
   m_ObjectHideFlags: 0
