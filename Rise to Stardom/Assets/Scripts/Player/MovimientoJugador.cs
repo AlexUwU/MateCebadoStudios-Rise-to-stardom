@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovimientoJugador : MonoBehaviour
+public class MovimientoJugador : EstadisticasJugador
 {
     /**
      *Vector3.forward
@@ -16,24 +16,23 @@ transform.forward
 transform.up
 transform.right
     **/
-    public int speed = 3;
     private void Update()
     {
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(transform.forward.normalized * speed * Time.deltaTime, Space.World);
+            transform.Translate(transform.forward.normalized * Velocidad * Time.deltaTime, Space.World);
         };
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(transform.forward.normalized * -speed * Time.deltaTime, Space.World);
+            transform.Translate(transform.forward.normalized * -Velocidad * Time.deltaTime, Space.World);
         };
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(transform.right.normalized * speed * Time.deltaTime, Space.World);
+            transform.Translate(transform.right.normalized * Velocidad * Time.deltaTime, Space.World);
         };
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(transform.right.normalized * -speed * Time.deltaTime, Space.World);
+            transform.Translate(transform.right.normalized * -Velocidad * Time.deltaTime, Space.World);
         };
     }
 }
