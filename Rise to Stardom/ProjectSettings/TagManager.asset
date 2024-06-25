@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Terreno
   - Pared
+  - Objeto
   layers:
   - Default
   - TransparentFX

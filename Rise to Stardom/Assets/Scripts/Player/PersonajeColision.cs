@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class PersonajeColision : MonoBehaviour
 {
-    [SerializeField] GameObject personaje;
-    private void OnTriggerEnter(Collider Pared)
+    private void OnTriggerEnter(Collider Objeto)
     {
         Debug.Log("Entro");
     }
-    private void OnTriggerStay(Collider Pared)
+    private void OnTriggerStay(Collider Objeto)
     {
         Debug.Log("Mantengo");
     }
-    private void OnTriggerExit(Collider Pared)
+    private void OnTriggerExit(Collider Objeto)
     {
         Debug.Log("Adios");
     }

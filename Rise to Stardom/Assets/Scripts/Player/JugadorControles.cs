@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MovimientoJugador))]
+[RequireComponent(typeof(PersonajeEstadisticas))]
 public class JugadorControles : MonoBehaviour
 {
     [SerializeField] Camera camara;
     MovimientoJugador motor;
     PersonajeEstadisticas stad;
+
+    public Interactuable focus;
 
     private void Start()
     {
@@ -17,7 +20,7 @@ public class JugadorControles : MonoBehaviour
     private void Update()
     {
         ////////////////////////// INTERACTUAR /////////////////////
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             Ray ray = camara.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -25,8 +28,16 @@ public class JugadorControles : MonoBehaviour
             if(Physics.Raycast(ray, out hit, 100))
             {
                 //hacer cosas cuando se cliquea algo
-                Debug.Log(hit.collider.name + hit.point);
+                Interactuable interactuable = hit.collider.GetComponent<Interactuable>();
+                if(interactuable != null)
+                {
+                    SetFocus(interactuable);
+                }
             }
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            RemoveFocus();
         }
         ////////////////// MOVIMIENTO ////////////////////////////
         if (Input.GetKey(KeyCode.W))
@@ -45,5 +56,23 @@ public class JugadorControles : MonoBehaviour
         {
             motor.Moverse(Vector3.right, -stad.velMov.GetValor());
         }
+    }
+
+    void SetFocus(Interactuable newFocus)
+    {
+        if(newFocus != focus)
+        {
+            if(focus != null)
+                focus.OnDefocused();
+            focus = newFocus;
+        }
+        newFocus.OnFocused(transform);
+    }
+
+    void RemoveFocus()
+    {
+        if (focus != null)
+            focus.OnDefocused();
+        focus = null;
     }
 }
