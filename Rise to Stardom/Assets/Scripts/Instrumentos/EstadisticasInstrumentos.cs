@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EstadisticasInstrumentos : EstadisticasJugador
+public class EstadisticasInstrumentos : MonoBehaviour
 {
     [SerializeField] public string instrumentName;
     [SerializeField] GameObject bulletNotePrefab;
