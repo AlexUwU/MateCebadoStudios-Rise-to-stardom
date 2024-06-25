@@ -5,30 +5,30 @@ using UnityEngine;
 [RequireComponent(typeof(MovimientoJugador))]
 public class JugadorControles : MonoBehaviour
 {
-    Camera camara;
+    [SerializeField] Camera camara;
     MovimientoJugador motor;
     PersonajeEstadisticas stad;
 
     private void Start()
     {
-        camara = Camera.main;
         motor = GetComponent<MovimientoJugador>();
         stad = GetComponent<PersonajeEstadisticas>();
     }
     private void Update()
     {
+        ////////////////////////// INTERACTUAR /////////////////////
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = camara.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if(Physics.Raycast(ray, out hit))
+            if(Physics.Raycast(ray, out hit, 100))
             {
                 //hacer cosas cuando se cliquea algo
                 Debug.Log(hit.collider.name + hit.point);
             }
         }
-        //////////////////////////////////////////////
+        ////////////////// MOVIMIENTO ////////////////////////////
         if (Input.GetKey(KeyCode.W))
         {
            motor.Moverse(Vector3.forward, stad.velMov.GetValor());
