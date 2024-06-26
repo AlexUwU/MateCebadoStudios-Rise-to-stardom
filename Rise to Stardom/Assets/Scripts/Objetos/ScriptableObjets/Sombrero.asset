@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535dd1d46b9d1094a92aaa72ac71b231, type: 3}
+  m_Name: Sombrero
+  m_EditorClassIdentifier: 
+  name: Sombrero
+  icono: {fileID: 0}
+  isConsumableItem: 0
+  isInstrumentItem: 0
+  dmgModificador: 0
+  velMovModificador: 2
+  velAtqModificador: 0
+  velProyModificador: 0
+  tamProyModificador: 0
