@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MovimientoJugador))]
-[RequireComponent(typeof(PersonajeEstadisticas))]
+[RequireComponent(typeof(ProtagonistaEstadisticas))]
 public class JugadorControles : MonoBehaviour
 {
     [SerializeField] Camera camara;
     [SerializeField] Transform inventarioCanvas;
     InventarioUI inventarioUI;
     MovimientoJugador motor;
-    PersonajeEstadisticas stad;
+    ProtagonistaEstadisticas stad;
 
     public Interactuable focus;
 
@@ -18,7 +18,7 @@ public class JugadorControles : MonoBehaviour
     {
         inventarioUI = inventarioCanvas.GetComponentInChildren<InventarioUI>();
         motor = GetComponent<MovimientoJugador>();
-        stad = GetComponent<PersonajeEstadisticas>();
+        stad = GetComponent<ProtagonistaEstadisticas>();
     }
     private void Update()
     {
@@ -42,7 +42,7 @@ public class JugadorControles : MonoBehaviour
         ////////////////////////// PRUEbA DAÑO //////////////////////////////////
         if (Input.GetKeyDown(KeyCode.T))
         {
-            stad.RecibirDmg(1);
+            stad.RecibirDmg(stad.dmg.GetValor());
         }
         ////////////////// MOVIMIENTO ////////////////////////////
         if (Input.GetKey(KeyCode.W))

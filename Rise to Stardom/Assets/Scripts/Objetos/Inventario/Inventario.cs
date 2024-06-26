@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,8 @@ public class Inventario : MonoBehaviour
 
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
+    public delegate void OnEquipmentChanged(Equipable newEquipable, Equipable oldEquipable);
+    public OnEquipmentChanged onEquipmentChangedCallback;
 
     //Se puede modificar para agregar un limite.
     public int limite = 1;
@@ -32,6 +35,10 @@ public class Inventario : MonoBehaviour
         {
             objetos.Add(objeto);
             onItemChangedCallback.Invoke();
+            if (onEquipmentChangedCallback != null)
+            {
+                onEquipmentChangedCallback.Invoke(objeto, null);
+            }
         }
         if (objeto.isInstrumentItem && !objeto.isConsumableItem)
         {
@@ -44,6 +51,11 @@ public class Inventario : MonoBehaviour
 
             if(onItemChangedCallback != null)
                 onItemChangedCallback.Invoke();
+            if(onEquipmentChangedCallback != null)
+            {
+                onEquipmentChangedCallback.Invoke(objeto, null);
+            }
+
         }
     }
 
@@ -53,12 +65,24 @@ public class Inventario : MonoBehaviour
 
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
+
+        if (onEquipmentChangedCallback != null)
+        {
+            onEquipmentChangedCallback.Invoke(objeto, null);
+        }
     }
     public void RemoverInstrumento ()
     {
+        Equipable viejo = instrumento[0];
         instrumento.RemoveRange(0,1);
+
 
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
+
+        if (onEquipmentChangedCallback != null)
+        {
+            onEquipmentChangedCallback.Invoke(null, viejo);
+        }
     }
 }

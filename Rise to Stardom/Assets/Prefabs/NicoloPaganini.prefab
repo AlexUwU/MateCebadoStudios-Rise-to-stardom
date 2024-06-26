@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 933704956816137885}
   - component: {fileID: 8107670136653744088}
   - component: {fileID: 8805959076068955472}
-  - component: {fileID: 8733066428908180494}
+  - component: {fileID: 6056857669952836074}
   m_Layer: 0
   m_Name: NicoloPaganini
   m_TagString: Player
@@ -178,8 +178,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camara: {fileID: 5107099723747585603}
+  inventarioCanvas: {fileID: 0}
   focus: {fileID: 0}
---- !u!114 &8733066428908180494
+--- !u!114 &6056857669952836074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,7 +189,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1550533664623815676}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9099b00c903dd824ca86b42da0c3d4c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 471a9b1f7ba27cd4b9cbbafec69f3d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   vidaMaxima:
@@ -196,7 +197,7 @@ MonoBehaviour:
   dmg:
     valorBaseEstadistica: 0
   velMov:
-    valorBaseEstadistica: 0
+    valorBaseEstadistica: 5
   velAtq:
     valorBaseEstadistica: 0
   velProy:

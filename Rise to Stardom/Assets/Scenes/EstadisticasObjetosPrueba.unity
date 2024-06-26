@@ -2371,6 +2371,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6056857669952836074, guid: e57446d738242064eb8c50481f7ded56, type: 3}
+      propertyPath: vidaMaxima.valorBaseEstadistica
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8335558264325621392, guid: e57446d738242064eb8c50481f7ded56, type: 3}
       propertyPath: m_Enabled
       value: 0
