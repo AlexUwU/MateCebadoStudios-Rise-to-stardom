@@ -1,19 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PersonajeColision : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider Objeto)
+    private void OnTriggerEnter(Collider Player)
     {
-        Debug.Log("Entro");
     }
-    private void OnTriggerStay(Collider Objeto)
+    private void OnTriggerStay(Collider Player)
     {
-        Debug.Log("Mantengo");
     }
-    private void OnTriggerExit(Collider Objeto)
+    private void OnTriggerExit(Collider Player)
     {
-        Debug.Log("Adios");
     }
 }

@@ -178,6 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camara: {fileID: 5107099723747585603}
+  focus: {fileID: 0}
 --- !u!114 &8733066428908180494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,10 +296,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3013187146012519916}
   - component: {fileID: 5840839404857809069}
-  - component: {fileID: 3617634644875200045}
+  - component: {fileID: 8746474149517265254}
   m_Layer: 0
   m_Name: HitBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -331,7 +332,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.8
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &3617634644875200045
+--- !u!114 &8746474149517265254
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -343,4 +344,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9732c5dbe92da4cb6875fa7d1779e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personaje: {fileID: 1550533664623815676}

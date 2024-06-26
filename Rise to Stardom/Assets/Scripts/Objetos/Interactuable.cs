@@ -7,10 +7,21 @@ public class Interactuable : MonoBehaviour
     Transform jugador;
     bool hasInteracted = false;
 
-    public virtual void Interact() // la finalidad de esta función es ser sobreescrita al ser heredada.
+    #region Funciones a ser sobreescritas con la herencia.
+    public virtual void Interact()
     {
-        Debug.Log("Dentro del rango");
     }
+    public virtual void OnTriggerEnter(Collider Player)
+    {
+    }
+    public virtual void OnTriggerStay(Collider Player)
+    {
+    }
+    public virtual void OnTriggerExit(Collider Player)
+    {
+    }
+    #endregion
+
     private void Update()
     {
         if (isFocus && !hasInteracted)
