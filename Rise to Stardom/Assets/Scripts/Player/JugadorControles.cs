@@ -7,6 +7,8 @@ using UnityEngine;
 public class JugadorControles : MonoBehaviour
 {
     [SerializeField] Camera camara;
+    [SerializeField] Transform inventarioCanvas;
+    InventarioUI inventarioUI;
     MovimientoJugador motor;
     PersonajeEstadisticas stad;
 
@@ -14,13 +16,14 @@ public class JugadorControles : MonoBehaviour
 
     private void Start()
     {
+        inventarioUI = inventarioCanvas.GetComponentInChildren<InventarioUI>();
         motor = GetComponent<MovimientoJugador>();
         stad = GetComponent<PersonajeEstadisticas>();
     }
     private void Update()
     {
-        ////////////////////////// INTERACTUAR /////////////////////
-        if (Input.GetMouseButtonDown(1))
+        ////////////////////////// Disparar /////////////////////
+        if (Input.GetMouseButtonDown(0))
         {
             Ray ray = camara.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -28,16 +31,18 @@ public class JugadorControles : MonoBehaviour
             if(Physics.Raycast(ray, out hit, 100))
             {
                 //hacer cosas cuando se cliquea algo
-                Interactuable interactuable = hit.collider.GetComponent<Interactuable>();
-                if(interactuable != null)
-                {
-                    SetFocus(interactuable);
-                }
+                Debug.Log("Disparo");
             }
         }
-        if (Input.GetKey(KeyCode.E))
+        /////////////////////// USAR INSTRUMENTO ///////////////////
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            RemoveFocus();
+            inventarioUI.tocarInstrumento();
+        }
+        ////////////////////////// PRUEbA DAÑO //////////////////////////////////
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            stad.RecibirDmg(1);
         }
         ////////////////// MOVIMIENTO ////////////////////////////
         if (Input.GetKey(KeyCode.W))
@@ -56,23 +61,5 @@ public class JugadorControles : MonoBehaviour
         {
             motor.Moverse(Vector3.right, -stad.velMov.GetValor());
         }
-    }
-
-    void SetFocus(Interactuable newFocus)
-    {
-        if(newFocus != focus)
-        {
-            if(focus != null)
-                focus.OnDefocused();
-            focus = newFocus;
-        }
-        newFocus.OnFocused(transform);
-    }
-
-    void RemoveFocus()
-    {
-        if (focus != null)
-            focus.OnDefocused();
-        focus = null;
     }
 }

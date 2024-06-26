@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CamaraControl : MonoBehaviour
 {
+    /// <summary>
+    /// No funciona, ver de eliminar o mejorar para que funcione.
+    /// </summary>
     public Transform objetivo;
     public Vector3 offset;
     private float currentZoom = 10f;

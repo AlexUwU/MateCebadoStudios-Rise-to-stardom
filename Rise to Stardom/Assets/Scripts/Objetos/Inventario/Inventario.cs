@@ -23,14 +23,15 @@ public class Inventario : MonoBehaviour
 
     //Se puede modificar para agregar un limite.
     public int limite = 1;
-    public List<Objeto> instrumento = new List<Objeto>();
-    public List<Objeto> objetos = new List<Objeto>();
+    public List<Equipable> instrumento = new List<Equipable>();
+    public List<Equipable> objetos = new List<Equipable>();
 
-    public void Add(Objeto objeto)
+    public void Add(Equipable objeto)
     {
         if (!objeto.isConsumableItem && !objeto.isInstrumentItem)
         {
             objetos.Add(objeto);
+            onItemChangedCallback.Invoke();
         }
         if (objeto.isInstrumentItem && !objeto.isConsumableItem)
         {
@@ -46,7 +47,7 @@ public class Inventario : MonoBehaviour
         }
     }
 
-    public void Remove(Objeto objeto) 
+    public void Remove(Equipable objeto) 
     { 
         objetos.Remove(objeto);
 

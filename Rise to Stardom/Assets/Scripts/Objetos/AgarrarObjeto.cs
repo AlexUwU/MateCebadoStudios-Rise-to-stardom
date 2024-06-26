@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class AgarrarObjeto : Interactuable
 {
-    public Objeto objeto;
+    public Equipable objeto;
 
     public override void OnTriggerEnter(Collider Player)
     {
