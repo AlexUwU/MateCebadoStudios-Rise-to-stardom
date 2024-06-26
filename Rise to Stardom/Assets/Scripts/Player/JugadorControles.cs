@@ -4,21 +4,22 @@ using UnityEngine;
 
 [RequireComponent(typeof(MovimientoJugador))]
 [RequireComponent(typeof(ProtagonistaEstadisticas))]
+[RequireComponent(typeof(DispararJugador))]
 public class JugadorControles : MonoBehaviour
 {
     [SerializeField] Camera camara;
     [SerializeField] Transform inventarioCanvas;
     InventarioUI inventarioUI;
     MovimientoJugador motor;
+    DispararJugador disparar;
     ProtagonistaEstadisticas stad;
-
-    public Interactuable focus;
 
     private void Start()
     {
         inventarioUI = inventarioCanvas.GetComponentInChildren<InventarioUI>();
         motor = GetComponent<MovimientoJugador>();
         stad = GetComponent<ProtagonistaEstadisticas>();
+        disparar = GetComponent<DispararJugador>();
     }
     private void Update()
     {
@@ -31,7 +32,8 @@ public class JugadorControles : MonoBehaviour
             if(Physics.Raycast(ray, out hit, 100))
             {
                 //hacer cosas cuando se cliquea algo
-                Debug.Log("Disparo");
+                if(stad.dmg.GetValor() > 0)
+                    disparar.Disparar(hit,stad.dmg.GetValor(), stad.velProy.GetValor());
             }
         }
         /////////////////////// USAR INSTRUMENTO ///////////////////

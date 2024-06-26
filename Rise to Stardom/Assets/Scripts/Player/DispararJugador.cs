@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 public class DispararJugador : MonoBehaviour
@@ -9,10 +10,8 @@ public class DispararJugador : MonoBehaviour
     private IFirepointHandler firepointHandler;
 
     [SerializeField] private Transform firePoint;
-    [SerializeField] private Transform pointer;
-    [SerializeField] private WeaponInstrument weaponInstrument;
-    [SerializeField] private int damage;
     [SerializeField] private float firePointDistance;
+    [SerializeField] private GameObject proyectil;
     private void Start()
     {
         inputHandler = new PLayerInputHandler();
@@ -20,22 +19,20 @@ public class DispararJugador : MonoBehaviour
         firepointHandler = new FirepointHandler(firePoint, transform, firePointDistance);
     }
 
-    private void Update()
+    public void Disparar(RaycastHit mouse, int damage, int speed)
     {
-        Vector3 pointerTargetPosition = pointer.position;
-        firepointHandler.Aim(pointerTargetPosition);
 
-        if (inputHandler.IsShooting())
-        {
-            Vector3 targetPosition = pointer.position;
-            if (shootHandler.CanShoot(weaponInstrument))
-            {
-                shootHandler.Shoot(targetPosition, weaponInstrument, damage);
-            }
-        }
-        else
-        {
-            shootHandler.CanShoot(weaponInstrument);
-        }
+        Vector3 pointerPosition = mouse.point;
+        Vector3 targetPosition = mouse.point;
+        Vector3 firePointPosition = firePoint.position;
+        Vector3 direction = (targetPosition - firePointPosition).normalized;
+        direction.y = 0f;
+
+        GameObject proy = GameObject.Instantiate(proyectil, firePointPosition, Quaternion.identity);
+        proy.GetComponent<Rigidbody>().velocity = direction * speed;
+
+        ProyectilBase buletNoteComponent = proy.GetComponent<ProyectilBase>();
+        buletNoteComponent.damage = damage;
     }
-}
+    }
+

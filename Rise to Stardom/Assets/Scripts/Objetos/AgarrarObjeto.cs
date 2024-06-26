@@ -7,7 +7,8 @@ public class AgarrarObjeto : Interactuable
 
     public override void OnTriggerEnter(Collider Player)
     {
-        Interact();
+        if(Player.tag == "Player")
+            Interact();
     }
     public override void Interact()
     {
