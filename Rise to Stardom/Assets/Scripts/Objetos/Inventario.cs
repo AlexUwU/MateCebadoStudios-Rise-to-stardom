@@ -17,6 +17,10 @@ public class Inventario : MonoBehaviour
         instance = this;
     }
     #endregion
+
+    public delegate void OnItemChanged();
+    public OnItemChanged onItemChangedCallback;
+
     //Se puede modificar para agregar un limite.
     public int limite = 1;
     public List<Objeto> instrumento = new List<Objeto>();
@@ -30,16 +34,30 @@ public class Inventario : MonoBehaviour
         }
         if (objeto.isInstrumentItem && !objeto.isConsumableItem)
         {
+            if (instrumento.Count >= limite)
+            {
+                Debug.Log("Cambio de instrumento");
+                RemoverInstrumento();
+            }
             instrumento.Add(objeto);
+
+            if(onItemChangedCallback != null)
+                onItemChangedCallback.Invoke();
         }
     }
 
     public void Remove(Objeto objeto) 
     { 
-        objetos.Remove(objeto); 
+        objetos.Remove(objeto);
+
+        if (onItemChangedCallback != null)
+            onItemChangedCallback.Invoke();
     }
-    public void RemoverInstrumento (Objeto objeto)
+    public void RemoverInstrumento ()
     {
-        instrumento.Remove(objeto);
+        instrumento.RemoveRange(0,1);
+
+        if (onItemChangedCallback != null)
+            onItemChangedCallback.Invoke();
     }
 }
