@@ -10,43 +10,51 @@ public class FanRangeEnemy : Enemy
     [SerializeField] float firepointDistance;
     [SerializeField] float evadeDistance;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         Rigidbody rigidbody = GetComponent<Rigidbody>();
         movementHandler = new RigidbodyMovementHandler(rigidbody);
         weaponInstrument = GetComponent<WeaponInstrument>();
         playerDetectionHandler = GetComponent<PlayerDetectionHandler>();
         shootHandler = new ShootHandler(firepoint);
-        firepointHandler = new FirepointHandler(firepoint,transform, firepointDistance);
+        firepointHandler = new FirepointHandler(firepoint, transform, firepointDistance);
+        AttackBehaviour = new FanRangeAttackBehaviour();
     }
-    public override void Action()
+    public override void Update()
     {
-        Vector3 playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
-        float distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
+        base.Update();
 
-        if(distanceToPlayer <= evadeDistance)
+        if (playerDetectionHandler.IsPlayerInRange(transform.position))
         {
-            EvadePlayer(playerPosition);
+            Vector3 playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+            float distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
+
+            if (distanceToPlayer <= evadeDistance)
+            {
+                SetState(new EvadeState());
+            }
+            else
+            {
+                Move(Vector3.zero);
+                SetState(new AttackState(GameObject.FindGameObjectWithTag("Player").transform));
+            }
         }
         else
         {
-            AimAndShoot(playerPosition);
+            SetState(new IdleState());
         }
     }
-    public override void Idle()
-    {
-        movementHandler.Move(Vector3.zero,0);
-    }
-    public void Move(Vector3 direction)
+    public override void Move(Vector3 direction)
     {
         movementHandler.Move(direction, Speed);
     }
 
-    public void Shoot(Vector3 targetPosition) 
+    public void Shoot(Vector3 targetPosition)
     {
-        if (shootHandler.CanShoot(weaponInstrument))
+        if (shootHandler.CanShoot())
         {
-            shootHandler.Shoot(targetPosition, weaponInstrument,Damage);
+            shootHandler.Shoot(targetPosition, weaponInstrument, Damage);
         }
     }
 

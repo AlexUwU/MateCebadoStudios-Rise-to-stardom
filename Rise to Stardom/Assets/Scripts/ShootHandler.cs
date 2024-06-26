@@ -12,7 +12,7 @@ public class ShootHandler : IShootHandler
 
     public void Shoot(Vector3 targetPosition, WeaponInstrument weaponInstrument, int damage)
     {
-        if(CanShoot(weaponInstrument)) 
+        if(CanShoot()) 
         {
             Vector3 firePointPosition = firePoint.position;
             Vector3 direction = (targetPosition - firePointPosition).normalized;
@@ -27,7 +27,7 @@ public class ShootHandler : IShootHandler
         }
     }
 
-    public bool CanShoot(WeaponInstrument weaponInstrument)
+    public bool CanShoot()
     {
         if (fireTimer <= 0f)
         {

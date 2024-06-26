@@ -3,79 +3,48 @@ using UnityEngine;
 public class HeadbangerEnemy : Enemy
 {
     private IMovementHandler movementHandler;
-    private Vector3 initialPosition;
-    private bool isStunned = false;
-    [SerializeField]private float stunDuration;
-    private float stunTimer;
 
-    private void Awake()
+    [SerializeField] private StunStateConfig stunConfig;
+
+    protected override void Awake()
     {
+        base.Awake();
         Rigidbody rigidbody = GetComponent<Rigidbody>();
         movementHandler = new RigidbodyMovementHandler(rigidbody);
         playerDetectionHandler = GetComponent<PlayerDetectionHandler>();
-        initialPosition = transform.position;
+        AttackBehaviour = new HeadbangerAttackBehaviour();
     }
 
     public override void Update()
     {
         base.Update();
-        if (isStunned)
+        if(playerDetectionHandler != null && playerDetectionHandler.IsEnabled())
         {
-            stunTimer -= Time.deltaTime;
-            if(stunTimer <= 0)
+            if (playerDetectionHandler.IsPlayerInRange(transform.position))
             {
-                stunTimer = 0;
-                isStunned=false;
-            }
-        }
-    }
-
-    public override void Action()
-    {
-        if (!isStunned)
-        {
-            Vector3 enemyPosition = transform.position;
-            Vector3 playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
-            Vector3 direction = (playerPosition - enemyPosition).normalized;
-            Move(direction);
-        }
-        else
-        {
-            movementHandler.Move(Vector3.zero, 0);
-        }
-    }
-
-    public override void Idle()
-    {
-        if(!isStunned)
-        {
-            Vector3 direction = (initialPosition - transform.position).normalized;
-
-            if (Vector3.Distance(transform.position, initialPosition) > 0.1f)
-            {
-                Move(direction);
+                SetState(new AttackState(GameObject.FindGameObjectWithTag("Player").transform));
             }
             else
             {
-                movementHandler.Move(Vector3.zero, 0);
+                SetState(new ReturnInitialPositionState());
             }
         }
     }
-    public void Move(Vector3 direction)
+
+    public override void Move(Vector3 direction)
     {
         movementHandler.Move(direction, Speed);
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Player") && !isStunned)
+        if(collision.gameObject.CompareTag("Player") )
         {
             HealthHandler healthHandlerPlayer = collision.gameObject.GetComponent<HealthHandler>();
             if(healthHandlerPlayer != null)
             {
                 healthHandlerPlayer.TakeDamage(Damage);
+                SetState(stunConfig.CreateState());
             }
-            isStunned = true;
-            stunTimer = stunDuration;
         }
     }
 }

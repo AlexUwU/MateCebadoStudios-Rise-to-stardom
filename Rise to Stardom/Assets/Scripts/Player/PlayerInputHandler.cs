@@ -11,6 +11,11 @@ public class PLayerInputHandler : IInputHandler
 
     public bool IsShooting()
     {
-        return Input.GetButtonDown("Fire1");
+        return Input.GetButtonDown("Fire1") ;
+    }
+
+    public bool IsHoldingFire()
+    {
+        return Input.GetButton("Fire1");
     }
 }
