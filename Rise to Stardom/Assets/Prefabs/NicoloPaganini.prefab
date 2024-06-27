@@ -194,15 +194,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaMaxima:
-    valorBaseEstadistica: 0
+    valorBaseEstadistica: 100
   dmg:
     valorBaseEstadistica: 0
   velMov:
     valorBaseEstadistica: 5
   velAtq:
-    valorBaseEstadistica: 0
+    valorBaseEstadistica: 2
   velProy:
-    valorBaseEstadistica: 0
+    valorBaseEstadistica: 5
   tamProy:
     valorBaseEstadistica: 0
 --- !u!114 &8861162532284651558

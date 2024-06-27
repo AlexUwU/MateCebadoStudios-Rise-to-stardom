@@ -19,7 +19,7 @@ public class DispararJugador : MonoBehaviour
         firepointHandler = new FirepointHandler(firePoint, transform, firePointDistance);
     }
 
-    public void Disparar(RaycastHit mouse, int damage, int speed)
+    public void Disparar(RaycastHit mouse, float damage, float speed)
     {
 
         Vector3 pointerPosition = mouse.point;

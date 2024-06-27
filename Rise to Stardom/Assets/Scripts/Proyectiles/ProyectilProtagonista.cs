@@ -6,11 +6,12 @@ public class ProyectilProtagonista : ProyectilBase
     {
         if (enemigo.tag == "Enemigo")
         {
+            int damageInt = (int)damage;
             Debug.Log("A");
             IHealthHandler healthHandler = enemigo.gameObject.GetComponent<IHealthHandler>();
             if (healthHandler != null)
             {
-                healthHandler.TakeDamage(damage);
+                healthHandler.TakeDamage(damageInt);
             }
             Destroy(gameObject);
         }
