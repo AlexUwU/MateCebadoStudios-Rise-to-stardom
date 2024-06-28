@@ -1,5 +1,5 @@
 public interface IHealthHandler
 {
-    int Health { get; }
-    void TakeDamage(int damage);
+    float Health { get; }
+    void TakeDamage(float damage);
 }

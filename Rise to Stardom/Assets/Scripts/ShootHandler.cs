@@ -12,7 +12,7 @@ public class ShootHandler : IShootHandler
 
     public void Shoot(Vector3 targetPosition, WeaponInstrument weaponInstrument, int damage)
     {
-        if(CanShoot(weaponInstrument)) 
+        if(CanShoot()) 
         {
             //Modificado Bullet por Proyectil enemigo para que dispare otro tipo de proyectil.
             Vector3 firePointPosition = firePoint.position;
@@ -28,7 +28,7 @@ public class ShootHandler : IShootHandler
         }
     }
 
-    public bool CanShoot(WeaponInstrument weaponInstrument)
+    public bool CanShoot()
     {
         if (fireTimer <= 0f)
         {
