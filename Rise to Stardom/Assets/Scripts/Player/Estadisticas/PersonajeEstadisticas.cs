@@ -3,7 +3,7 @@ using UnityEngine;
 public class PersonajeEstadisticas : MonoBehaviour
 {
     public Estadisticas vidaMaxima; 
-    public int vidaActual {  get; private set; }
+    public float vidaActual {  get; private set; }
     public Estadisticas dmg;
     public Estadisticas velMov;
     public Estadisticas velAtq;
@@ -14,7 +14,7 @@ public class PersonajeEstadisticas : MonoBehaviour
     {
         vidaActual = vidaMaxima.GetValor();
     }
-    public void RecibirDmg(int dmgSufrido)
+    public void RecibirDmg(float dmgSufrido)
     {
         vidaActual -= dmgSufrido;
         Debug.Log(transform.name + "Recibio: " + dmgSufrido + " puntos de daño");
@@ -28,5 +28,6 @@ public class PersonajeEstadisticas : MonoBehaviour
     {
         //Poner animación de muerte.
         Debug.Log(transform.name + " murio.");
+        Destroy(gameObject);
     }
 }

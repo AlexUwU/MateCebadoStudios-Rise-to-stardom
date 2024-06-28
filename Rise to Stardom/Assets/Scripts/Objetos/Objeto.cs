@@ -7,6 +7,7 @@ public class Objeto : ScriptableObject
     public Sprite icono = null;
     public bool isConsumableItem = false;
     public bool isInstrumentItem = false;
+    public bool isProyectileItem = false;
 
     public virtual void Usar()
     {

@@ -7,7 +7,7 @@ public class Equipable : Objeto
 {
     public int dmgModificador;
     public int velMovModificador;
-    public int velAtqModificador;
+    public float velAtqModificador;
     public int velProyModificador;
     public int tamProyModificador;
 
