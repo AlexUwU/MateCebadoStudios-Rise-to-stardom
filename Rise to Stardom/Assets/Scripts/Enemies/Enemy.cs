@@ -6,6 +6,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private int damage;
     [SerializeField] private Vector3 initialPosition;
+    public Transform objetivo;
 
     public float Speed { get { return speed; } }
     public int Damage { get { return damage; } }
@@ -25,6 +26,10 @@ public abstract class Enemy : MonoBehaviour
     public void SetState(IEnemyState state)
     {
         enemyStateManager.SetState(state,this);
+    }
+    public void Start()
+    {
+        objetivo = VidaControl.Instance.Jugador.transform;
     }
     public virtual void Update()
     {

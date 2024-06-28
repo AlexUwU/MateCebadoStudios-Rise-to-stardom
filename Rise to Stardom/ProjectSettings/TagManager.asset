@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Terreno
+  - Pared
+  - Objeto
+  - HitBox
+  - Enemigo
   layers:
   - Default
   - TransparentFX

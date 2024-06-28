@@ -39,12 +39,25 @@ public class HeadbangerEnemy : Enemy
     {
         if(collision.gameObject.CompareTag("Player") )
         {
+            Debug.Log("Estoy chocando");
             HealthHandler healthHandlerPlayer = collision.gameObject.GetComponent<HealthHandler>();
             if(healthHandlerPlayer != null)
             {
                 healthHandlerPlayer.TakeDamage(Damage);
                 SetState(stunConfig.CreateState());
             }
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if ((other.tag == "Player") && !isStunned)
+        {
+            Debug.Log("Estoy chocando");
+            ProtagonistaEstadisticas vidaJugador = objetivo.gameObject.GetComponent<ProtagonistaEstadisticas>();
+            if(vidaJugador != null)
+                vidaJugador.RecibirDmg((float)Damage);
+            isStunned = true;
+            stunTimer = stunDuration;
         }
     }
 }

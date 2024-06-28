@@ -14,13 +14,14 @@ public class ShootHandler : IShootHandler
     {
         if(CanShoot()) 
         {
+            //Modificado Bullet por Proyectil enemigo para que dispare otro tipo de proyectil.
             Vector3 firePointPosition = firePoint.position;
             Vector3 direction = (targetPosition - firePointPosition).normalized;
 
             GameObject bulletNote = GameObject.Instantiate(weaponInstrument.bulletNotePrefab, firePointPosition, Quaternion.identity);
-            bulletNote.GetComponent<Rigidbody>().velocity = direction * weaponInstrument.bulletNotePrefab.GetComponent<BulletNote>().speed;
+            bulletNote.GetComponent<Rigidbody>().velocity = direction * weaponInstrument.bulletNotePrefab.GetComponent<ProyectilEnemigo>().speed;
 
-            BulletNote buletNoteComponent = bulletNote.GetComponent<BulletNote>();
+            ProyectilEnemigo buletNoteComponent = bulletNote.GetComponent<ProyectilEnemigo>();
             buletNoteComponent.damage = damage;
 
             fireTimer = weaponInstrument.fireRate;
