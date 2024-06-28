@@ -3,13 +3,16 @@ using UnityEngine;
 public class PlayerDetectionHandler : MonoBehaviour, IPlayerDetectionHandler
 {
     [SerializeField] private float detectionRange;
+    private bool isEnabled = true;
 
-    public bool IsPlayerInRange(Vector2 position)
+    public bool IsPlayerInRange(Vector3 position)
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if(player == null) return false;
+        if (!isEnabled) { return false; }
 
-        float distance = Vector2.Distance(position, player.transform.position);
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null) return false;
+
+        float distance = Vector3.Distance(position, player.transform.position);
         return distance <= detectionRange;
     }
 
@@ -17,5 +20,14 @@ public class PlayerDetectionHandler : MonoBehaviour, IPlayerDetectionHandler
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
+    }
+
+    public void SetEnabled(bool enabled)
+    {
+        isEnabled = enabled;
+    }
+    public bool IsEnabled()
+    {
+        return isEnabled;
     }
 }

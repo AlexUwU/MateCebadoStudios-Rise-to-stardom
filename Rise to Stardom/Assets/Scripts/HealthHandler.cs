@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class HealthHandler : MonoBehaviour, IHealthHandler
 {
-    [SerializeField] private int health;
+    [SerializeField] private float health;
 
-    public int Health {  get { return health; } }
+    public float Health {  get { return health; } }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
         if (health <= 0)

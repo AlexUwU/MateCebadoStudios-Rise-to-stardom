@@ -4,4 +4,5 @@ public interface IInputHandler
 {
     Vector3 GetInputMovement();
     bool IsShooting();
+    bool IsHoldingFire();
 }

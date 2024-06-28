@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private IMovementHandler movementHandler;
     private IShootHandler shootHandler;
     private IFirepointHandler firepointHandler;
+    private Dictionary<FireMode, IFireModeHandler> fireModes;
 
     [SerializeField] private float moveSpeed;
     [SerializeField] private Transform firePoint;
@@ -21,7 +22,13 @@ public class PlayerController : MonoBehaviour
         inputHandler = new PLayerInputHandler();
         movementHandler = new RigidbodyMovementHandler(GetComponent<Rigidbody>());
         shootHandler = new ShootHandler(firePoint);
-        firepointHandler = new FirepointHandler(firePoint,transform,firePointDistance);
+        firepointHandler = new FirepointHandler(firePoint, transform, firePointDistance);
+
+        fireModes = new Dictionary<FireMode, IFireModeHandler>
+        {
+            { FireMode.Auto, new AutoFireMode()},
+            { FireMode.Semi, new SemiFireMode() }
+        };
     }
 
     private void Update()
@@ -32,18 +39,12 @@ public class PlayerController : MonoBehaviour
         Vector3 pointerTargetPosition = pointer.position;
         firepointHandler.Aim(pointerTargetPosition);
 
-        if (inputHandler.IsShooting())
+        IFireModeHandler fireModeHandler = fireModes[weaponInstrument.fireMode];
+        fireModeHandler.HandleFireMode(inputHandler, shootHandler, pointer, weaponInstrument, damage);
+
+        if (Input.GetKeyDown(KeyCode.Q) && weaponInstrument.instrumentAbiltity != null)
         {
-            Vector3 targetPosition = pointer.position;
-            if (shootHandler.CanShoot(weaponInstrument))
-            {
-                shootHandler.Shoot(targetPosition, weaponInstrument,damage);
-            }
-        }
-        else
-        {
-            shootHandler.CanShoot(weaponInstrument);
+            weaponInstrument.instrumentAbiltity.Activate();
         }
     }
-
 }
