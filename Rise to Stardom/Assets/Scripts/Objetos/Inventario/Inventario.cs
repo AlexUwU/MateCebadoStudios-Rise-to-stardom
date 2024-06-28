@@ -31,7 +31,7 @@ public class Inventario : MonoBehaviour
 
     public void Add(Equipable objeto)
     {
-        if (!objeto.isConsumableItem && !objeto.isInstrumentItem)
+        if (!objeto.isConsumableItem && !objeto.isInstrumentItem && !objeto.isProyectileItem)
         {
             objetos.Add(objeto);
             onItemChangedCallback.Invoke();
@@ -40,7 +40,7 @@ public class Inventario : MonoBehaviour
                 onEquipmentChangedCallback.Invoke(objeto, null);
             }
         }
-        if (objeto.isInstrumentItem && !objeto.isConsumableItem)
+        if (objeto.isInstrumentItem && !objeto.isConsumableItem && !objeto.isProyectileItem)
         {
             if (instrumento.Count >= limite)
             {

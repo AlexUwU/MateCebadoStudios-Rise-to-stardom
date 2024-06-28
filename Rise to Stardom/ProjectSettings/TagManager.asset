@@ -7,6 +7,8 @@ TagManager:
   - Terreno
   - Pared
   - Objeto
+  - HitBox
+  - Enemigo
   layers:
   - Default
   - TransparentFX

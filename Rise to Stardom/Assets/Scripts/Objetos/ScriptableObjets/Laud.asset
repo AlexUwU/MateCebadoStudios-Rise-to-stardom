@@ -16,8 +16,9 @@ MonoBehaviour:
   icono: {fileID: 21300000, guid: 4a7d14acd94f3914d8b442dd9b4bf4cd, type: 3}
   isConsumableItem: 0
   isInstrumentItem: 1
+  isProyectileItem: 0
   dmgModificador: 10
   velMovModificador: 0
-  velAtqModificador: 0
+  velAtqModificador: -1.5
   velProyModificador: 0
   tamProyModificador: 0

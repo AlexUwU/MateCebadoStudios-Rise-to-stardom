@@ -12,7 +12,7 @@ public class BulletNote : MonoBehaviour
         Destroy(gameObject,lifetime);
     }
 
-    private void OnCollisionEnter(Collision collision)
+   private void OnCollisionEnter(Collision collision)
     {
         IHealthHandler healthHandler = collision.gameObject.GetComponent<IHealthHandler>();
         if (healthHandler != null)

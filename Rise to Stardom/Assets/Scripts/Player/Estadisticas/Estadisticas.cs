@@ -4,21 +4,23 @@ using UnityEngine;
 [System.Serializable]
 public class Estadisticas
 {
-    [SerializeField] private int valorBaseEstadistica;
-    private List<int> modificadores = new List<int>();
-    public int GetValor()
+    [SerializeField] private float valorBaseEstadistica;
+    private List<float> modificadores = new List<float>();
+    public float GetValor()
     {
-        int valorFinal = valorBaseEstadistica;
+        float valorFinal = valorBaseEstadistica;
         modificadores.ForEach(x => valorFinal += x);
+        if (valorFinal <= 0)
+            valorFinal = 0.01f;
 
         return valorFinal;
     }
-    public void AddModificador(int modificador)
+    public void AddModificador(float modificador)
     {
         if(modificador != 0)
             modificadores.Add(modificador);
     }
-    public void RemoveModificador(int modificador)
+    public void RemoveModificador(float modificador)
     {
         if (modificador != 0)
             modificadores.Remove(modificador);
