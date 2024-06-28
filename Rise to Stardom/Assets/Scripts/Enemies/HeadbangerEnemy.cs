@@ -6,6 +6,7 @@ public class HeadbangerEnemy : Enemy
 
     [SerializeField] private StunStateConfig stunConfig;
 
+
     protected override void Awake()
     {
         base.Awake();
@@ -50,14 +51,12 @@ public class HeadbangerEnemy : Enemy
     }
     private void OnTriggerStay(Collider other)
     {
-        if ((other.tag == "Player") && !isStunned)
+        if ((other.tag == "Player"))
         {
             Debug.Log("Estoy chocando");
             ProtagonistaEstadisticas vidaJugador = objetivo.gameObject.GetComponent<ProtagonistaEstadisticas>();
             if(vidaJugador != null)
                 vidaJugador.RecibirDmg((float)Damage);
-            isStunned = true;
-            stunTimer = stunDuration;
         }
     }
 }
