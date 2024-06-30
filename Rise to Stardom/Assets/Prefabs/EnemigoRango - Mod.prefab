@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 1487923980033346063}
   - component: {fileID: 1487923980033346062}
   - component: {fileID: 1487923980033346050}
+  - component: {fileID: 4046080426072248118}
   m_Layer: 0
   m_Name: EnemigoRango - Mod
   m_TagString: Enemigo
@@ -165,7 +166,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   damage: 10
+  initialPosition: {x: 0, y: 0, z: 0}
   objetivo: {fileID: 0}
+  enemyStateManager: {fileID: 0}
   firepoint: {fileID: 1487923978982515192}
   firepointDistance: 1
   evadeDistance: 3
@@ -210,3 +213,17 @@ MonoBehaviour:
   instrumentName: fr
   bulletNotePrefab: {fileID: 3066714835067613380, guid: 0f6b6785e93a5b04889726648cfff9e5, type: 3}
   fireRate: 1
+  fireMode: 0
+  instrumentAbiltity: {fileID: 0}
+--- !u!114 &4046080426072248118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487923980033346069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e4cf8bfd46f41488d0416474da2f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
