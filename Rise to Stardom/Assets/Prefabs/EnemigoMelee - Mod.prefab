@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8842510952122453484}
   - component: {fileID: 8842510952122453487}
   - component: {fileID: 8842510952122453486}
+  - component: {fileID: 8296637083981209294}
   m_Layer: 0
   m_Name: EnemigoMelee - Mod
   m_TagString: Enemigo
@@ -132,8 +133,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   damage: 20
+  initialPosition: {x: 0, y: 0, z: 0}
   objetivo: {fileID: 0}
-  stunDuration: 2
+  enemyStateManager: {fileID: 0}
+  stunConfig: {fileID: 0}
 --- !u!114 &8842510952122453487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,3 +163,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionRange: 12
+--- !u!114 &8296637083981209294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8842510952122453481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e4cf8bfd46f41488d0416474da2f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
