@@ -125,6 +125,22 @@ PrefabInstance:
       propertyPath: spawnDoors.Array.data[2]
       value: 
       objectReference: {fileID: 6164002289718284488}
+    - target: {fileID: 6666407826296927753, guid: 7d39b1af80408e4418e935ffa0b96209, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6666407826389083347, guid: 7d39b1af80408e4418e935ffa0b96209, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6666407826713813801, guid: 7d39b1af80408e4418e935ffa0b96209, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6666407826883005578, guid: 7d39b1af80408e4418e935ffa0b96209, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d39b1af80408e4418e935ffa0b96209, type: 3}
 --- !u!1 &531748493906680358 stripped
