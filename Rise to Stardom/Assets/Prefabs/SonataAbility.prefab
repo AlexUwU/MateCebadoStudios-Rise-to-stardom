@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5718706662397259734}
   - component: {fileID: 6823780347502819066}
   - component: {fileID: 6786338532266989948}
-  - component: {fileID: 5524399024448909677}
   m_Layer: 0
   m_Name: SonataAbility
   m_TagString: Untagged
@@ -98,20 +97,3 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5524399024448909677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6590861322383408087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5bf401b7f93b284d816d6fdb4390b02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sonataPrefab: {fileID: 6590861322383408087}
-  playerTransform: {fileID: 3009612045004859719, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
-  expandSpeed: 5
-  expandDuration: 3
-  stateDuration: 10

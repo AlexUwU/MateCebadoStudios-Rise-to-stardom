@@ -22,3 +22,4 @@ MonoBehaviour:
   velAtqModificador: -1.5
   velProyModificador: 0
   tamProyModificador: 0
+  instrumentAbility: {fileID: 11400000, guid: c33282921bca46e4492564ce10508ae0, type: 2}

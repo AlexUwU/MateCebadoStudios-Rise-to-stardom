@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 597629048720731567}
   - component: {fileID: 6543264391439559434}
   - component: {fileID: 760770289798910247}
-  - component: {fileID: 7842740568833969969}
   m_Layer: 0
   m_Name: RingFire
   m_TagString: Untagged
@@ -98,22 +97,3 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7842740568833969969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2574120169894605801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 000df46656a9d1c4596a278ee45406ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireRingPrefab: {fileID: 2574120169894605801}
-  playerTransform: {fileID: 3009612045004859719, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
-  expandSpeed: 3
-  expandDuration: 5
-  damageInitial: 3
-  damageOverTime: 1
-  damageOverTimeDuration: 30

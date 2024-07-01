@@ -40,7 +40,7 @@ public class FanRangeEnemy : Enemy
                 SetState(new AttackState(GameObject.FindGameObjectWithTag("Player").transform));
             }
         }
-        else
+        else if (playerDetectionHandler.IsEnabled())
         {
             SetState(new IdleState());
         }
