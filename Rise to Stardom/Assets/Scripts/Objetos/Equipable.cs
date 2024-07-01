@@ -10,9 +10,11 @@ public class Equipable : Objeto
     public float velAtqModificador;
     public int velProyModificador;
     public int tamProyModificador;
+    public InstrumentAbilityBase instrumentAbility;
 
     public override void Usar()
     {
         base.Usar();
+        instrumentAbility.Activate();
     }
 }

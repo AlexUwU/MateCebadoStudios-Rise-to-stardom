@@ -3,7 +3,6 @@ using UnityEngine;
 public class HealthHandler : MonoBehaviour, IHealthHandler
 {
     [SerializeField] private float health;
-
     public float Health {  get { return health; } }
 
     public void TakeDamage(float damage)
@@ -16,6 +15,10 @@ public class HealthHandler : MonoBehaviour, IHealthHandler
     }
     private void Die()
     {
-        Destroy(gameObject);
+        var enemy = GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            enemy.SetState(new DefeatState());
+        }
     }
 }

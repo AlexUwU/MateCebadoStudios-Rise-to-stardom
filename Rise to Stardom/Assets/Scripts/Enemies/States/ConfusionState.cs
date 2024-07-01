@@ -26,8 +26,11 @@ public class ConfusionState : IEnemyState
     {
         if(IsStateActive)
         {
+            Debug.Log(duration);
+            Debug.Log("XD");
             AttackOtherEnemies(enemy);
             timer -= Time.deltaTime;
+            Debug.Log(timer);
             if(timer < 0)
             {
                 ExitState(enemy);
@@ -45,7 +48,7 @@ public class ConfusionState : IEnemyState
         Enemy nearEnemy = FindNearestEnemy(enemy);
         if(nearEnemy != null)
         {
-            enemy.AttackBehaviour.Attack(enemy, nearEnemy.transform);
+            enemy.AttackBehaviour.Attack(owner, nearEnemy.transform);
         }
     }
 
