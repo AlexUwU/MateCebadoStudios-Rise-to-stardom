@@ -14,7 +14,7 @@ public abstract class Enemy : MonoBehaviour
     public IAttackBehaviour AttackBehaviour { get; set; }
 
     public IPlayerDetectionHandler playerDetectionHandler;
-    private IHealthHandler healthHandler;
+    public IHealthHandler healthHandler;
     public EnemyStateManager enemyStateManager;
 
 
