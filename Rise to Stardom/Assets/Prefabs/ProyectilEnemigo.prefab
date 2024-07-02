@@ -129,4 +129,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   lifetime: 5
-  damage: 0
+  damage: 1
+  objetivo: {fileID: 0}
