@@ -27,9 +27,7 @@ public abstract class BossPhaseState : IEnemyState
                 boss.AimAndShoot(boss.objetivo.position);
                 UseAbilities(boss.CurrentAbilities, enemy);
             }
-
         }
-
     }
 
     public virtual void ExitState(Enemy enemy)

@@ -14,7 +14,7 @@ public class RoomMainBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(cantDoors);
+        //Debug.Log(cantDoors);
         if (cantDoors == 1 && !gameManager.estPuertas && gameManager.roomEnemy == 0)
         {
             Destroy(this.gameObject);

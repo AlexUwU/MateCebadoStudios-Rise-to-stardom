@@ -10,6 +10,7 @@ TagManager:
   - Objeto
   - HitBox
   - Enemigo
+  - ProyectilProtagonista
   layers:
   - Default
   - TransparentFX

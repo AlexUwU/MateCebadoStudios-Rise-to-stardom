@@ -14,9 +14,9 @@ public class EnemyStateManager : MonoBehaviour
             currentState.ExitState(enemy);
         }
         currentState = newState;
-        currentStateName = newState.GetType().Name;
+        //currentStateName = newState.GetType().Name;
         currentState.EnterState(enemy);
-        Debug.Log($"Current state: {currentStateName}");
+        //Debug.Log($"Current state: {currentStateName}");
     }
 
     public void AddSecondaryState(IEnemyState newState,Enemy enemy)

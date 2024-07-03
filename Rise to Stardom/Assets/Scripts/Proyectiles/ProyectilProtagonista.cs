@@ -4,7 +4,7 @@ public class ProyectilProtagonista : ProyectilBase
 {
     public override void OnTriggerEnter(Collider enemigo)
     {
-        if (enemigo.tag == "Enemigo")
+        if (enemigo.tag == "Enemigo" || (enemigo.tag == "Player" && GetOwner().CompareTag("Enemigo")))
         {
             int damageInt = (int)damage;
             Debug.Log("A");

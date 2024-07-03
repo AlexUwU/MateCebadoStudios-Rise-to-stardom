@@ -2,27 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossPhase3State : IEnemyState
+public class BossPhase3State : BossPhaseState
 {
-    private Boss boss;
+    public BossPhase3State(Boss boss) : base(boss) { }
 
-    public bool IsStateActive { get; private set; }
-    public BossPhase3State(Boss boss)
+    protected override List<IEnemyAbility> GetAbilitiesForPhase()
     {
-        this.boss = boss;
-    }
-    public void EnterState(Enemy enemy)
-    {
-        IsStateActive = true;
+        return boss.Phase3Abilities.ConvertAll(a => (IEnemyAbility)a);
     }
 
-    public void UpdateState(Enemy enemy)
+    public override void UpdateState(Enemy enemy)
     {
-        Debug.Log("Phase3");
-    }
-
-    public void ExitState(Enemy enemy)
-    {
-        IsStateActive = false;
+        base.UpdateState(enemy);
+        Vector3 direction = (enemy.objetivo.transform.position - enemy.transform.position).normalized;
+        enemy.Speed = 3f;
+        enemy.Move(direction);
+        //Debug.Log("Phase3");
     }
 }
