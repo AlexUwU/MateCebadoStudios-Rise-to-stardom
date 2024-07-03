@@ -510,7 +510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3009612045004859719, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5
+      value: -6.09
       objectReference: {fileID: 0}
     - target: {fileID: 3009612045004859719, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -661,9 +661,10 @@ GameObject:
   - component: {fileID: 1352887959}
   - component: {fileID: 1352887960}
   - component: {fileID: 1352887962}
+  - component: {fileID: 1352887963}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -701,8 +702,14 @@ MonoBehaviour:
   firepointDistance: 1
   phase1Abilities:
   - {fileID: 11400000, guid: a7fff8715893f9b42a76ceae2b12f548, type: 2}
-  phase2Abilities: []
-  phase3Abilities: []
+  phase2Abilities:
+  - {fileID: 11400000, guid: a7fff8715893f9b42a76ceae2b12f548, type: 2}
+  - {fileID: 11400000, guid: 334bd846fb9b067488bbe1f874a66ab6, type: 2}
+  phase3Abilities:
+  - {fileID: 11400000, guid: a1368da2c6209b345bcaf3d1c6629e55, type: 2}
+  - {fileID: 11400000, guid: ca74a3b87dd3d8d4fa0b1551b5645f5a, type: 2}
+  - {fileID: 11400000, guid: a7fff8715893f9b42a76ceae2b12f548, type: 2}
+  - {fileID: 11400000, guid: 334bd846fb9b067488bbe1f874a66ab6, type: 2}
   phase2Threshold: 0.6
   phase3Threshold: 0.3
 --- !u!65 &1352887955
@@ -796,7 +803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e4535f2d4a18d48b935c9339a747ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 5
+  detectionRange: 10
 --- !u!114 &1352887960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,6 +850,19 @@ MonoBehaviour:
   fireRate: 3
   fireMode: 0
   instrumentAbiltity: {fileID: 0}
+--- !u!114 &1352887963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352887952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e7a483068cb944a9cf76673d2de273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reflectShieldAbility: {fileID: 11400000, guid: 334bd846fb9b067488bbe1f874a66ab6, type: 2}
 --- !u!1001 &1354546080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -856,7 +876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8009269159729215556, guid: 5e3a0b93274bf444bb8cb70b62902a39, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8009269159729215556, guid: 5e3a0b93274bf444bb8cb70b62902a39, type: 3}
       propertyPath: m_TagString

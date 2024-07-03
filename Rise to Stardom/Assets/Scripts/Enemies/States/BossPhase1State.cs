@@ -14,6 +14,6 @@ public class BossPhase1State : BossPhaseState
     public override void UpdateState(Enemy enemy)
     {
         base.UpdateState(enemy);
-        Debug.Log("Phase1");
+        //Debug.Log("Phase1");
     }
 }

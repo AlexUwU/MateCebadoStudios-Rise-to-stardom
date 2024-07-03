@@ -9,8 +9,7 @@ public class FanShootAbility : EnemyAbility
     [SerializeField] private float spreadAngle;
     [SerializeField] private float cooldown;
     [SerializeField] bool isEnabled;
-    private bool isAvailable = true;
-    private float timer;
+    private Coroutine cooldownCoroutine;
 
     public FanShootAbility(int numberOfBullets, float spreadAngle)
     {
@@ -51,30 +50,16 @@ public class FanShootAbility : EnemyAbility
                 angle += angleStep;
             }
 
-            timer = cooldown;
-            isAvailable = false;
+            cooldownCoroutine = enemy.StartCoroutine(CooldownCoroutine());
         }
     }
-
+    private IEnumerator CooldownCoroutine()
+    {
+        yield return new WaitForSeconds(cooldown);
+        cooldownCoroutine = null;
+    }
     public override bool CanUse()
     {
-        if (!isAvailable && isEnabled)
-        {
-            timer -= Time.deltaTime;
-            if(timer < 0)
-            {
-                isAvailable = true;
-            }
-        }
-        return isAvailable && isEnabled;
-    }
-
-    public void SetEnabled(bool enabled)
-    {
-        isEnabled = enabled;
-        if (!enabled)
-        {
-            isAvailable = false;
-        }
+        return cooldownCoroutine == null && isEnabled;
     }
 }

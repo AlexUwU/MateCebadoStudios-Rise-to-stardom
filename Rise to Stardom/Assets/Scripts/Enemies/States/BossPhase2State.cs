@@ -2,27 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossPhase2State : IEnemyState
+public class BossPhase2State : BossPhaseState
 {
-    private Boss boss;
+    public BossPhase2State(Boss boss) : base(boss) { }
 
-    public bool IsStateActive { get; private set; }
-    public BossPhase2State(Boss boss)
+    protected override List<IEnemyAbility> GetAbilitiesForPhase()
     {
-        this.boss = boss;
-    }
-    public void EnterState(Enemy enemy)
-    {
-        IsStateActive = true;
+        return boss.Phase2Abilities.ConvertAll(a => (IEnemyAbility)a);
     }
 
-    public void UpdateState(Enemy enemy)
+    public override void UpdateState(Enemy enemy)
     {
-        Debug.Log("Phase2");
+        base.UpdateState(enemy);
+        RotateAroundPlayer(enemy);
+        //Debug.Log("Phase2");
     }
-
-    public void ExitState(Enemy enemy)
+    private void RotateAroundPlayer(Enemy enemy)
     {
-        IsStateActive = false;
+        Transform player = enemy.objetivo;
+        float rotationSpeed = 2f;
+        float orbitRadius = 5f; 
+
+        Vector3 offset = new Vector3(Mathf.Sin(Time.time * rotationSpeed), 0, Mathf.Cos(Time.time * rotationSpeed)) * orbitRadius;
+        Vector3 targetPosition = player.position + offset;
+
+        Vector3 direction = (targetPosition - enemy.transform.position).normalized;
+        enemy.Speed = 2f; 
+        enemy.Move(direction);
+
+        enemy.transform.LookAt(player);
     }
 }
