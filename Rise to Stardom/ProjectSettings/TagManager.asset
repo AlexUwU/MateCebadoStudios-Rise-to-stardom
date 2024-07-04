@@ -11,6 +11,7 @@ TagManager:
   - HitBox
   - Enemigo
   - Coin
+  - ProyectilProtagonista
   layers:
   - Default
   - TransparentFX

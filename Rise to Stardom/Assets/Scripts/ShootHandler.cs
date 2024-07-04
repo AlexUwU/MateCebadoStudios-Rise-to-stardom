@@ -19,9 +19,9 @@ public class ShootHandler : IShootHandler
             Vector3 direction = (targetPosition - firePointPosition).normalized;
 
             GameObject bulletNote = GameObject.Instantiate(weaponInstrument.bulletNotePrefab, firePointPosition, Quaternion.identity);
-            bulletNote.GetComponent<Rigidbody>().velocity = direction * weaponInstrument.bulletNotePrefab.GetComponent<ProyectilEnemigo>().speed;
+            bulletNote.GetComponent<Rigidbody>().velocity = direction * weaponInstrument.bulletNotePrefab.GetComponent<ProyectilBase>().speed;
 
-            ProyectilEnemigo buletNoteComponent = bulletNote.GetComponent<ProyectilEnemigo>();
+            ProyectilBase buletNoteComponent = bulletNote.GetComponent<ProyectilBase>();
             buletNoteComponent.damage = damage;
 
             fireTimer = weaponInstrument.fireRate;

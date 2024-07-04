@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7478218320303927442}
   m_Layer: 0
   m_Name: ProyectilProtagonista
-  m_TagString: Untagged
+  m_TagString: ProyectilProtagonista
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a5574697f838fd41ada320c04b6e596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 5
   lifetime: 5
-  damage: 0
+  damage: 3
+  objetivo: {fileID: 0}

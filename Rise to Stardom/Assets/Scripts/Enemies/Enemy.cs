@@ -8,13 +8,17 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] private Vector3 initialPosition;
     public Transform objetivo;
 
-    public float Speed { get { return speed; } }
+    public float Speed
+    {
+        get { return speed; }
+        set { speed = value; }
+    }
     public int Damage { get { return damage; } }
     public Vector3 InitialPosition { get { return initialPosition; } }
     public IAttackBehaviour AttackBehaviour { get; set; }
 
     public IPlayerDetectionHandler playerDetectionHandler;
-    private IHealthHandler healthHandler;
+    public IHealthHandler healthHandler;
     public EnemyStateManager enemyStateManager;
 
 

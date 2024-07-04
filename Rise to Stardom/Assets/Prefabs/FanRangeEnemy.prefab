@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: -7861238412721696772}
   m_Layer: 0
   m_Name: FanRangeEnemy
-  m_TagString: Enemy
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,6 +136,7 @@ MonoBehaviour:
   speed: 2
   damage: 1
   initialPosition: {x: 0, y: 0, z: 0}
+  objetivo: {fileID: 0}
   enemyStateManager: {fileID: 0}
   firepoint: {fileID: 8009269160909673385}
   firepointDistance: 1
@@ -179,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instrumentName: fr
-  bulletNotePrefab: {fileID: 3066714835067613380, guid: 712220b7592119a43a06c762c0067fc7, type: 3}
+  bulletNotePrefab: {fileID: 3066714835067613380, guid: 0f6b6785e93a5b04889726648cfff9e5, type: 3}
   fireRate: 2
   fireMode: 0
   instrumentAbiltity: {fileID: 0}
