@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameBehaviour : MonoBehaviour
 {
     public bool estPuertas = false;
     public int roomEnemy;
+    public bool boss;
 
     public HUD hud;
 
@@ -14,7 +16,16 @@ public class GameBehaviour : MonoBehaviour
 
     void Start()
     {
+        boss = false;
         roomEnemy = 0;
+    }
+
+    void Update()
+    {
+        if (boss)
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 
     private void Awake()

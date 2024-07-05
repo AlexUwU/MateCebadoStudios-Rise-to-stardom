@@ -34,7 +34,7 @@ public class HUD : MonoBehaviour
 
     public void DisabledLives(int indice)
     {
-        vidas[indice].SetActive(false);
+        vidas[indice-1].SetActive(false);
     }
 
     public void ActivateLives(int indice)

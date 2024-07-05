@@ -2,8 +2,14 @@ using UnityEngine;
 
 public class HealthHandler : MonoBehaviour, IHealthHandler
 {
+    public GameBehaviour numeroDeEnemigo;
     [SerializeField] private float health;
     public float Health {  get { return health; } }
+
+    private void Start()
+    {
+        numeroDeEnemigo = FindObjectOfType<GameBehaviour>();
+    }
 
     public void TakeDamage(float damage)
     {
@@ -19,6 +25,8 @@ public class HealthHandler : MonoBehaviour, IHealthHandler
         if (enemy != null)
         {
             enemy.SetState(new DefeatState());
+            Debug.Log(numeroDeEnemigo.roomEnemy);
+            numeroDeEnemigo.roomEnemy--;
         }
     }
 }

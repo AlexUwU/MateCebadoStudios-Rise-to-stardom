@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Boss : Enemy
 {
+
+    public GameBehaviour stateBoss;
+
     private IMovementHandler movementHandler;
     private WeaponInstrument weaponInstrument;
     private IShootHandler shootHandler;
@@ -27,6 +30,12 @@ public class Boss : Enemy
     public List<EnemyAbility> Phase2Abilities { get { return phase2Abilities; } }
     public List<EnemyAbility> Phase3Abilities { get { return phase3Abilities; } }
 
+
+    public override void Start()
+    {
+        base.Start();
+        stateBoss = FindObjectOfType<GameBehaviour>();
+    }
     protected override void Awake()
     {
         base.Awake();
@@ -112,6 +121,7 @@ public class Boss : Enemy
         }
         else if (currentHealth <= phase3Change && currentPhase < 3)
         {
+            stateBoss.boss = true;
             return true;
         }
 

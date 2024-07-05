@@ -12,6 +12,7 @@ TagManager:
   - Enemigo
   - Coin
   - ProyectilProtagonista
+  - Transparent
   layers:
   - Default
   - TransparentFX

@@ -19,7 +19,7 @@ public class HeadbangerEnemy : Enemy
     public override void Update()
     {
         base.Update();
-        if(playerDetectionHandler != null && playerDetectionHandler.IsEnabled())
+        if(playerDetectionHandler != null && playerDetectionHandler.IsEnabled() )
         {
             if (playerDetectionHandler.IsPlayerInRange(transform.position))
             {
@@ -48,8 +48,10 @@ public class HeadbangerEnemy : Enemy
                 SetState(stunConfig.CreateState());
             }
         }
+
+        
     }
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if ((other.tag == "Player"))
         {
@@ -59,4 +61,5 @@ public class HeadbangerEnemy : Enemy
                 vidaJugador.RecibirDmg((float)Damage);
         }
     }
+    
 }

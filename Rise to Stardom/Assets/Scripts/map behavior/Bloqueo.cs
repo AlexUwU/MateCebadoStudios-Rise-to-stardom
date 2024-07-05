@@ -10,7 +10,7 @@ public class Bloqueo : MonoBehaviour
     public GameBehaviour gameManager;
     void Start()
     {
-        move = 0.25f * Time.deltaTime;
+        move = 0.5f * Time.deltaTime;
         gameManager = FindObjectOfType<GameBehaviour>();
     }
 
