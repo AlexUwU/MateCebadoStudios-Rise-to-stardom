@@ -31,7 +31,7 @@ public abstract class Enemy : MonoBehaviour
     {
         enemyStateManager.SetState(state,this);
     }
-    public void Start()
+    public virtual void Start()
     {
         objetivo = VidaControl.Instance.Jugador.transform;
     }

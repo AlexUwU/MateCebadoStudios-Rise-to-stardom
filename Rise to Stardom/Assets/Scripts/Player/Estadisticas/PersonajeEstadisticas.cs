@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PersonajeEstadisticas : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PersonajeEstadisticas : MonoBehaviour
         vidaActual -= dmgSufrido;
         Debug.Log(transform.name + "Recibio: " + dmgSufrido + " puntos de daño");
         totalDamage += dmgSufrido;
+        Debug.Log(vidaActual);
         if (totalDamage <= vidaMaxima.GetValor())
         {
             hud.DisabledLives(hud.cantLives);
@@ -45,6 +47,7 @@ public class PersonajeEstadisticas : MonoBehaviour
 
     public virtual void Muerte()
     {
+        SceneManager.LoadScene(2);
         //Poner animación de muerte.
         Debug.Log(transform.name + " murio.");
         Destroy(gameObject);

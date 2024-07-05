@@ -25,7 +25,7 @@ public class FanRangeEnemy : Enemy
     {
         base.Update();
 
-        if (playerDetectionHandler.IsPlayerInRange(transform.position))
+        if (playerDetectionHandler.IsPlayerInRange(transform.position) && playerDetectionHandler != null)
         {
             Vector3 playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
             float distanceToPlayer = Vector3.Distance(transform.position, playerPosition);

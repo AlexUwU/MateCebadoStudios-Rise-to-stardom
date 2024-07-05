@@ -30,6 +30,6 @@ public class BossPhase2State : BossPhaseState
         enemy.Speed = 2f; 
         enemy.Move(direction);
 
-        enemy.transform.LookAt(player);
+        //enemy.transform.LookAt(player);
     }
 }
