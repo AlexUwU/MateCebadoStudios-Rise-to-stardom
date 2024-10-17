@@ -10,21 +10,14 @@ public class ShootHandler : IShootHandler
         this.fireTimer = 0f;
     }
 
-    public void Shoot(Vector3 targetPosition, WeaponInstrument weaponInstrument, int damage)
+    public void Shoot(Vector3 targetPosition, WeaponInstrument weaponInstrument, float damage, float attackSpeed,float bulletSpeed)
     {
+        float fireInterval = 1f/ attackSpeed;
+
         if(CanShoot()) 
         {
-            //Modificado Bullet por Proyectil enemigo para que dispare otro tipo de proyectil.
-            Vector3 firePointPosition = firePoint.position;
-            Vector3 direction = (targetPosition - firePointPosition).normalized;
-
-            GameObject bulletNote = GameObject.Instantiate(weaponInstrument.bulletNotePrefab, firePointPosition, Quaternion.identity);
-            bulletNote.GetComponent<Rigidbody>().velocity = direction * weaponInstrument.bulletNotePrefab.GetComponent<ProyectilBase>().speed;
-
-            ProyectilBase buletNoteComponent = bulletNote.GetComponent<ProyectilBase>();
-            buletNoteComponent.damage = damage;
-
-            fireTimer = weaponInstrument.fireRate;
+            weaponInstrument.Use(firePoint, targetPosition, damage, bulletSpeed);
+            fireTimer = fireInterval;
         }
     }
 
@@ -34,7 +27,14 @@ public class ShootHandler : IShootHandler
         {
             return true;
         }
-        fireTimer -= Time.deltaTime;
         return false;
+    }
+
+    public void Update() // Nueva función para actualizar el temporizador
+    {
+        if (fireTimer > 0f)
+        {
+            fireTimer -= Time.deltaTime; // Decrementa el temporizador en cada frame
+        }
     }
 }

@@ -14,7 +14,7 @@ public class DispararJugador : MonoBehaviour
     [SerializeField] private GameObject proyectil;
     private void Start()
     {
-        inputHandler = new PLayerInputHandler();
+        inputHandler = new PlayerInputHandler();
         shootHandler = new ShootHandler(firePoint);
         firepointHandler = new FirepointHandler(firePoint, transform, firePointDistance);
     }

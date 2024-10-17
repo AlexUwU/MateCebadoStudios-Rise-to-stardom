@@ -11,7 +11,7 @@ public class EvadeState : IEnemyState
 
     public void UpdateState(Enemy enemy)
     {
-        Vector3 playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+        Vector3 playerPosition = Player.Instance.playerTransform.position;
         Vector3 direction = (enemy.transform.position - playerPosition).normalized;
         enemy.Move(direction);
 

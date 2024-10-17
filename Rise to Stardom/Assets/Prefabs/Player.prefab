@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3009612045004859714}
   - component: {fileID: 3009612045004859768}
   - component: {fileID: 3009612045004859769}
-  - component: {fileID: 3009612045004859718}
   - component: {fileID: 3009612045004859771}
   m_Layer: 0
   m_Name: Player
@@ -130,29 +129,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a000efadc748f0a4794d0daf388f1b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   firePoint: {fileID: 3009612045172749879}
   pointer: {fileID: 0}
-  weaponInstrument: {fileID: 3009612045004859718}
+  weaponInstrument: {fileID: 0}
   damage: 1
   firePointDistance: 1
---- !u!114 &3009612045004859718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3009612045004859715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fead162c8a0b6840b22e1244fa5a357, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instrumentName: lude
-  bulletNotePrefab: {fileID: 3066714835067613380, guid: 712220b7592119a43a06c762c0067fc7, type: 3}
-  fireRate: 1
-  fireMode: 0
-  instrumentAbiltity: {fileID: 7842740568833969969, guid: 9f624f93c75eed747a7ce8fd9a74daa9, type: 3}
 --- !u!114 &3009612045004859771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b72a422199197b4449d63c04c2c1f108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numeroDeEnemigo: {fileID: 0}
   health: 5
 --- !u!1 &3009612045172749876
 GameObject:

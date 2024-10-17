@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fead162c8a0b6840b22e1244fa5a357, type: 3}
+  m_Name: Flauta
+  m_EditorClassIdentifier: 
+  instrumentName: Flauta
+  bulletNotePrefab: {fileID: 919323602001919846, guid: c566de8cef130014d9a8a8d5399ba93f, type: 3}
+  fireMode: 1
+  instrumentAbiltity: {fileID: 11400000, guid: 21087d771f77c4e44a078155c2d67d2a, type: 2}
+  droppedWeaponPrefab: {fileID: 8377631152057256220, guid: ba9d5cfca1cf63d488d0493942e0c902, type: 3}

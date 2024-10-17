@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 4430194839343863479}
   - component: {fileID: 4430194839343863473}
   - component: {fileID: 4430194839343863486}
-  - component: {fileID: 4430194839343863484}
   - component: {fileID: 4430194839343863485}
   m_Layer: 0
   m_Name: Boss
@@ -254,6 +253,7 @@ MonoBehaviour:
   initialPosition: {x: 0, y: 0, z: 0}
   objetivo: {fileID: 0}
   enemyStateManager: {fileID: 0}
+  stateBoss: {fileID: 0}
   firepoint: {fileID: 4430194837522769333}
   firepointDistance: 1
   phase1Abilities:
@@ -307,23 +307,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numeroDeEnemigo: {fileID: 0}
   health: 10
---- !u!114 &4430194839343863484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4430194839343863478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fead162c8a0b6840b22e1244fa5a357, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instrumentName: 
-  bulletNotePrefab: {fileID: 3066714835067613380, guid: 0f6b6785e93a5b04889726648cfff9e5, type: 3}
-  fireRate: 3
-  fireMode: 0
-  instrumentAbiltity: {fileID: 0}
 --- !u!114 &4430194839343863485
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,11 +16,10 @@ GameObject:
   - component: {fileID: 8009269159729215581}
   - component: {fileID: 8009269159729215582}
   - component: {fileID: 8009269159729215583}
-  - component: {fileID: 8009269159729215571}
   - component: {fileID: -7861238412721696772}
   m_Layer: 0
   m_Name: FanRangeEnemy
-  m_TagString: Enemigo
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,14 +132,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c6e4133d0dc7440aa53b47cff2c067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  damage: 1
+  health:
+    baseValue: 5
+    modifiers: []
+  moveSpeed:
+    baseValue: 3
+    modifiers: []
+  damage:
+    baseValue: 1
+    modifiers: []
   initialPosition: {x: 0, y: 0, z: 0}
-  objetivo: {fileID: 0}
   enemyStateManager: {fileID: 0}
   firepoint: {fileID: 8009269160909673385}
   firepointDistance: 1
   evadeDistance: 3
+  attackSpeed:
+    baseValue: 1
+    modifiers: []
+  bulletSpeed:
+    baseValue: 3
+    modifiers: []
+  weaponInstrument: {fileID: 11400000, guid: 40e7fd2012d7f5b4d9b9bfe5d6aa5b87, type: 2}
 --- !u!114 &8009269159729215582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b72a422199197b4449d63c04c2c1f108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numeroDeEnemigo: {fileID: 0}
   health: 3
 --- !u!114 &8009269159729215583
 MonoBehaviour:
@@ -167,23 +180,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionRange: 5
---- !u!114 &8009269159729215571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8009269159729215556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fead162c8a0b6840b22e1244fa5a357, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instrumentName: fr
-  bulletNotePrefab: {fileID: 3066714835067613380, guid: 0f6b6785e93a5b04889726648cfff9e5, type: 3}
-  fireRate: 2
-  fireMode: 0
-  instrumentAbiltity: {fileID: 0}
 --- !u!114 &-7861238412721696772
 MonoBehaviour:
   m_ObjectHideFlags: 0

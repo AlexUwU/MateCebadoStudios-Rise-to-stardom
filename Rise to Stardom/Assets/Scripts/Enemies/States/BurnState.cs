@@ -37,11 +37,7 @@ public class BurnState : IEnemyState
             {
                 yield break;
             }
-            IHealthHandler healthHandler = enemy.GetComponent<HealthHandler>();
-            if(healthHandler != null)
-            {
-                healthHandler.TakeDamage(damageOverTime);
-            }
+            enemy.TakeDamage(damageOverTime);
             timer -= 1f;
             yield return new WaitForSeconds(1f);
         }

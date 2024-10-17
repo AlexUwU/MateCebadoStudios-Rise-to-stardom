@@ -4,7 +4,7 @@ public class HealthHandler : MonoBehaviour, IHealthHandler
 {
     public GameBehaviour numeroDeEnemigo;
     [SerializeField] private float health;
-    public float Health {  get { return health; } }
+    public float Health { get { return health; } }
 
     private void Start()
     {

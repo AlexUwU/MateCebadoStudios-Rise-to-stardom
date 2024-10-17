@@ -13,8 +13,7 @@ public class FireRingAbility : InstrumentAbilityBase
     public float damageOverTimeDuration;
     public override void Activate()
     {
-        GameObject player = GameObject.FindWithTag("Player");
-        playerTransform = player.transform;
+        playerTransform = Player.Instance.playerTransform;
         GameObject fireRing = Instantiate(fireRingPrefab, playerTransform.transform.position, Quaternion.identity);
         FireRingAbilityHandler handler = fireRing.AddComponent<FireRingAbilityHandler>();
         handler.Initialize(expandSpeed, expandDuration, damageInitial, damageOverTime, damageOverTimeDuration, playerTransform);

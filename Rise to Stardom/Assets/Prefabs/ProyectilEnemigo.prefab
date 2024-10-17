@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3066714835067613403}
   - component: {fileID: -1653411062981874289}
   - component: {fileID: 3066714835067613402}
-  - component: {fileID: 6089014178258339149}
+  - component: {fileID: 5580100425914965288}
   m_Layer: 0
   m_Name: ProyectilEnemigo
   m_TagString: Untagged
@@ -115,7 +115,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6089014178258339149
+--- !u!114 &5580100425914965288
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,10 +124,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3066714835067613380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93482260d528ed7419d2912dc5e4c58e, type: 3}
+  m_Script: {fileID: 11500000, guid: f588a0941ced7bf40a27a591fe324528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
   lifetime: 5
-  damage: 1
-  objetivo: {fileID: 0}
+  damage: 0
