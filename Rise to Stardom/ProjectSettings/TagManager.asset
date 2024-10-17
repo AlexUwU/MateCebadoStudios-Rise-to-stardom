@@ -10,7 +10,9 @@ TagManager:
   - Objeto
   - HitBox
   - Enemigo
+  - Coin
   - ProyectilProtagonista
+  - Transparent
   layers:
   - Default
   - TransparentFX

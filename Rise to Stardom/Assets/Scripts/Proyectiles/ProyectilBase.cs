@@ -19,6 +19,7 @@ public class ProyectilBase : MonoBehaviour
 
     private void Start()
     {
+        SetOwner(this.gameObject);
         objetivo = VidaControl.Instance.Jugador.transform;
         Destroy(gameObject, lifetime);
     }

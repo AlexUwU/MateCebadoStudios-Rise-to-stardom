@@ -19,7 +19,7 @@ public class HeadbangerEnemy : Enemy
     public override void Update()
     {
         base.Update();
-        if(playerDetectionHandler != null && playerDetectionHandler.IsEnabled())
+        if(playerDetectionHandler != null && playerDetectionHandler.IsEnabled() )
         {
             if (playerDetectionHandler.IsPlayerInRange(transform.position))
             {
@@ -47,14 +47,7 @@ public class HeadbangerEnemy : Enemy
                 SetState(stunConfig.CreateState());
             }
         }
-<<<<<<< Updated upstream
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if ((other.tag == "Player"))
-=======
         else if (collision.gameObject.CompareTag("Enemy"))
->>>>>>> Stashed changes
         {
             Enemy otherEnemy = collision.gameObject.GetComponent<Enemy>();
             if (otherEnemy != null && enemyStateManager.currentStateName == "ConfusionState")
@@ -64,4 +57,5 @@ public class HeadbangerEnemy : Enemy
             }
         }
     }
+    
 }

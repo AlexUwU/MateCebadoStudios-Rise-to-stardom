@@ -28,13 +28,8 @@ public class FanRangeEnemy : Enemy
     public override void Update()
     {
         base.Update();
-<<<<<<< Updated upstream
-
-        if (playerDetectionHandler.IsPlayerInRange(transform.position))
-=======
         shootHandler.Update();
         if (playerDetectionHandler.IsPlayerInRange(transform.position) && playerDetectionHandler != null)
->>>>>>> Stashed changes
         {
             Vector3 playerPosition = Player.Instance.playerTransform.position;
             float distanceToPlayer = Vector3.Distance(transform.position, playerPosition);

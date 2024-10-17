@@ -28,7 +28,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     {
         enemyStateManager.SetState(state,this);
     }
-    public void Start()
+    public virtual void Start()
     {
 
     }

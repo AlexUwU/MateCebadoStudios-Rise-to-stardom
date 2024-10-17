@@ -18,6 +18,7 @@ public class RoomMainBehavior : MonoBehaviour
         if (cantDoors == 1 && !gameManager.estPuertas && gameManager.roomEnemy == 0)
         {
             Destroy(this.gameObject);
+            Debug.Log(cantDoors);
         }
     }
 }

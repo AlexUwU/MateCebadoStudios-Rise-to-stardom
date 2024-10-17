@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class Boss : Enemy
 {
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
     private IMovementHandler movementHandler;
     private IShootHandler shootHandler;
     private IFirepointHandler firepointHandler;
@@ -35,15 +31,11 @@ public class Boss : Enemy
     public List<EnemyAbility> Phase2Abilities { get { return phase2Abilities; } }
     public List<EnemyAbility> Phase3Abilities { get { return phase3Abilities; } }
 
-<<<<<<< Updated upstream
-=======
-
     public override void Start()
     {
         base.Start();
         maxHealth = Health.Value;
     }
->>>>>>> Stashed changes
     protected override void Awake()
     {
         base.Awake();
@@ -126,6 +118,7 @@ public class Boss : Enemy
         }
         else if (currentHealth <= phase3Change && currentPhase < 3)
         {
+            stateBoss.boss = true;
             return true;
         }
 
