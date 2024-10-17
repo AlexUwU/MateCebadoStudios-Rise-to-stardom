@@ -118,7 +118,6 @@ public class Boss : Enemy
         }
         else if (currentHealth <= phase3Change && currentPhase < 3)
         {
-            stateBoss.boss = true;
             return true;
         }
 
