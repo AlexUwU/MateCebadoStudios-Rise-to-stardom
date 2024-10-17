@@ -19,7 +19,7 @@ public class BossPhase2State : BossPhaseState
     }
     private void RotateAroundPlayer(Enemy enemy)
     {
-        Transform player = enemy.objetivo;
+        Transform player = GameObject.FindGameObjectWithTag("Player").transform;
         float rotationSpeed = 2f;
         float orbitRadius = 5f; 
 
@@ -27,7 +27,7 @@ public class BossPhase2State : BossPhaseState
         Vector3 targetPosition = player.position + offset;
 
         Vector3 direction = (targetPosition - enemy.transform.position).normalized;
-        enemy.Speed = 2f; 
+        enemy.MoveSpeed.BaseValue = 2f; 
         enemy.Move(direction);
 
         enemy.transform.LookAt(player);

@@ -23,7 +23,7 @@ public class HeadbangerEnemy : Enemy
         {
             if (playerDetectionHandler.IsPlayerInRange(transform.position))
             {
-                SetState(new AttackState(GameObject.FindGameObjectWithTag("Player").transform));
+                SetState(new AttackState(Player.Instance.playerTransform));
             }
             else
             {
@@ -34,29 +34,34 @@ public class HeadbangerEnemy : Enemy
 
     public override void Move(Vector3 direction)
     {
-        movementHandler.Move(direction, Speed);
+        movementHandler.Move(direction, MoveSpeed.Value);
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Player") )
+        if(collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Estoy chocando");
-            HealthHandler healthHandlerPlayer = collision.gameObject.GetComponent<HealthHandler>();
-            if(healthHandlerPlayer != null)
+            PlayerStats playerStats = Player.Instance?.PlayerStats;
+            if(playerStats != null)
             {
-                healthHandlerPlayer.TakeDamage(Damage);
+                playerStats.CurrentHealth -= Damage.Value;
                 SetState(stunConfig.CreateState());
             }
         }
+<<<<<<< Updated upstream
     }
     private void OnTriggerStay(Collider other)
     {
         if ((other.tag == "Player"))
+=======
+        else if (collision.gameObject.CompareTag("Enemy"))
+>>>>>>> Stashed changes
         {
-            Debug.Log("Estoy chocando");
-            ProtagonistaEstadisticas vidaJugador = objetivo.gameObject.GetComponent<ProtagonistaEstadisticas>();
-            if(vidaJugador != null)
-                vidaJugador.RecibirDmg((float)Damage);
+            Enemy otherEnemy = collision.gameObject.GetComponent<Enemy>();
+            if (otherEnemy != null && enemyStateManager.currentStateName == "ConfusionState")
+            {
+                otherEnemy.TakeDamage(Damage.Value);
+                TakeDamage(Damage.Value);
+            }
         }
     }
 }

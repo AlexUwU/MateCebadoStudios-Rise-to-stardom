@@ -1,31 +1,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Enemy : MonoBehaviour
+public abstract class Enemy : MonoBehaviour, IDamageable
 {
-    [SerializeField] private float speed;
-    [SerializeField] private int damage;
+    [SerializeField] private Stat health;
+    [SerializeField] private Stat moveSpeed;
+    [SerializeField] private Stat damage;
     [SerializeField] private Vector3 initialPosition;
-    public Transform objetivo;
 
-    public float Speed
-    {
-        get { return speed; }
-        set { speed = value; }
-    }
-    public int Damage { get { return damage; } }
+    public Stat Health => health;
+    public Stat MoveSpeed => moveSpeed;
+    public Stat Damage => damage;
     public Vector3 InitialPosition { get { return initialPosition; } }
     public IAttackBehaviour AttackBehaviour { get; set; }
 
     public IPlayerDetectionHandler playerDetectionHandler;
-    public IHealthHandler healthHandler;
-    public EnemyStateManager enemyStateManager;
 
+    public EnemyStateManager enemyStateManager;
 
     protected virtual void Awake()
     {
         enemyStateManager = GetComponent<EnemyStateManager>();
         initialPosition = transform.position;
+        Health.BaseValue = health.BaseValue;
     }
     public void SetState(IEnemyState state)
     {
@@ -33,7 +30,7 @@ public abstract class Enemy : MonoBehaviour
     }
     public void Start()
     {
-        objetivo = VidaControl.Instance.Jugador.transform;
+
     }
     public virtual void Update()
     {
@@ -41,6 +38,19 @@ public abstract class Enemy : MonoBehaviour
     }
     public virtual void Move(Vector3 direction)
     {
+    }
+    public void TakeDamage(float damage)
+    {
+        Health.BaseValue -= damage;
+        if (Health.Value <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        SetState(new DefeatState());
     }
     public void AddSecondaryState(IEnemyState state)
     {

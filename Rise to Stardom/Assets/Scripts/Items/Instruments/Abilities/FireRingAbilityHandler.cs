@@ -2,24 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SonataAbilityHandler : MonoBehaviour
+public class FireRingAbilityHandler : MonoBehaviour
 {
-    public GameObject sonataPrefab;
+    public GameObject fireRingPrefab;
     public Transform playerTransform;
     public float expandSpeed;
     public float expandDuration;
-    public float stateDuration;
-
-    public void Initialize(float expandSpeed, float expandDuration, float stateDuration,Transform playerTransform)
+    public int damageInitial;
+    public int damageOverTime;
+    public float damageOverTimeDuration;
+    public void Initialize(float expandSpeed, float expandDuration, int damageInitial, int damageOverTime, float damageOverTimeDuration,Transform playerTransform)
     {
         this.expandSpeed = expandSpeed;
         this.expandDuration = expandDuration;
-        this.stateDuration = stateDuration;
+        this.damageInitial = damageInitial;
+        this.damageOverTime = damageOverTime;
+        this.damageOverTimeDuration = damageOverTimeDuration;
         this.playerTransform = playerTransform;
 
-        StartCoroutine(Expand());
+        StartCoroutine(ExpandAndDamage());
     }
-    private IEnumerator Expand()
+    private IEnumerator ExpandAndDamage()
     {
         float timer = expandDuration;
         float currentScale = 0;
@@ -39,16 +42,12 @@ public class SonataAbilityHandler : MonoBehaviour
         }
         Destroy(gameObject);
     }
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemigo"))
+        if (other.CompareTag("Enemy"))
         {
-            Enemy enemy = other.GetComponent<Enemy>();
-            var confusionState = new ConfusionState(stateDuration, enemy);
-            enemy.SetState(confusionState);
+            var burnStae = new BurnState(damageOverTime, damageOverTimeDuration);
+            other.GetComponent<Enemy>()?.AddSecondaryState(burnStae);
         }
     }
-
-
 }

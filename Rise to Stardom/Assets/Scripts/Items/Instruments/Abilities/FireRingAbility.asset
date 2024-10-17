@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRingPrefab: {fileID: 2574120169894605801, guid: 9f624f93c75eed747a7ce8fd9a74daa9, type: 3}
   playerTransform: {fileID: 0}
-  expandSpeed: 5
-  expandDuration: 10
+  expandSpeed: 20
+  expandDuration: 1
   damageInitial: 1
   damageOverTime: 2
   damageOverTimeDuration: 5

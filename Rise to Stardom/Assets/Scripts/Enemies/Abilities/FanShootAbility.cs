@@ -20,31 +20,33 @@ public class FanShootAbility : EnemyAbility
     {
         if (CanUse())
         {
+            Boss boss = enemy as Boss;
+            if (boss == null || boss.weaponInstrument == null) return;
+
+            Transform firePoint = boss.firepoint;
+            if (firePoint == null) return;
+
+            boss.Aim(Player.Instance.transform.position);
+            
             float angleStep = spreadAngle / (numberOfBullets-1);
             float angle = -spreadAngle / 2;
 
-            Transform firePoint = enemy.transform.Find("FirePoint");
-            WeaponInstrument weaponInstrument = enemy.GetComponent<WeaponInstrument>();
-
-            Boss boss = enemy as Boss;
-            boss.Aim(enemy.objetivo.position);
-
             for (int i = 0; i < numberOfBullets; i++)
             {
-                Vector3 directionToPlayer = (enemy.objetivo.position - firePoint.position).normalized;
+                Vector3 directionToPlayer = (GameObject.FindGameObjectWithTag("Player").transform.position - firePoint.position).normalized;
                 Vector3 direction = Quaternion.Euler(0, angle, 0) * directionToPlayer;
 
-                GameObject bullet = GameObject.Instantiate(weaponInstrument.bulletNotePrefab, firePoint.position, Quaternion.identity);
+                GameObject bullet = GameObject.Instantiate(boss.weaponInstrument.bulletNotePrefab, firePoint.position, Quaternion.identity);
                 Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
                 if (bulletRigidbody != null)
                 {
-                    bulletRigidbody.velocity = direction * bullet.GetComponent<ProyectilBase>().speed;
+                    bulletRigidbody.velocity = direction * boss.BulletSpeed.Value;
                 }
 
                 ProyectilBase bulletComponent = bullet.GetComponent<ProyectilBase>();
                 if (bulletComponent != null)
                 {
-                    bulletComponent.damage = enemy.Damage;
+                    bulletComponent.damage = enemy.Damage.Value;
                 }
 
                 angle += angleStep;

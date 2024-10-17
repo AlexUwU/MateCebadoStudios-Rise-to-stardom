@@ -12,8 +12,7 @@ public class SonataAbility : InstrumentAbilityBase
     public float stateDuration;
     public override void Activate()
     {
-        GameObject player = GameObject.FindWithTag("Player");
-        playerTransform = player.transform;
+        playerTransform = Player.Instance.playerTransform;
         GameObject sonata = Instantiate(sonataPrefab, playerTransform.position, Quaternion.identity);
         SonataAbilityHandler handler = sonata.AddComponent<SonataAbilityHandler>();
         handler.Initialize(expandSpeed,expandDuration,stateDuration,playerTransform);

@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyStateManager : MonoBehaviour
 {
     private IEnemyState currentState;
-    private string currentStateName;
+    public string currentStateName;
     private List<IEnemyState> secondaryStates = new List<IEnemyState>();
     public void SetState(IEnemyState newState, Enemy enemy)
     {
@@ -14,7 +14,7 @@ public class EnemyStateManager : MonoBehaviour
             currentState.ExitState(enemy);
         }
         currentState = newState;
-        //currentStateName = newState.GetType().Name;
+        currentStateName = newState.GetType().Name;
         currentState.EnterState(enemy);
         //Debug.Log($"Current state: {currentStateName}");
     }

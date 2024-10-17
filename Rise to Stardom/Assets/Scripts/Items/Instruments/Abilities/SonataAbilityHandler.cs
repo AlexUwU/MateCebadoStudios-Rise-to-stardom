@@ -2,27 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireRingAbilityHandler : MonoBehaviour
+public class SonataAbilityHandler : MonoBehaviour
 {
-    public GameObject fireRingPrefab;
+    public GameObject sonataPrefab;
     public Transform playerTransform;
     public float expandSpeed;
     public float expandDuration;
-    public int damageInitial;
-    public int damageOverTime;
-    public float damageOverTimeDuration;
-    public void Initialize(float expandSpeed, float expandDuration, int damageInitial, int damageOverTime, float damageOverTimeDuration,Transform playerTransform)
+    public float stateDuration;
+
+    public void Initialize(float expandSpeed, float expandDuration, float stateDuration,Transform playerTransform)
     {
         this.expandSpeed = expandSpeed;
         this.expandDuration = expandDuration;
-        this.damageInitial = damageInitial;
-        this.damageOverTime = damageOverTime;
-        this.damageOverTimeDuration = damageOverTimeDuration;
+        this.stateDuration = stateDuration;
         this.playerTransform = playerTransform;
 
-        StartCoroutine(ExpandAndDamage());
+        StartCoroutine(Expand());
     }
-    private IEnumerator ExpandAndDamage()
+    private IEnumerator Expand()
     {
         float timer = expandDuration;
         float currentScale = 0;
@@ -42,17 +39,14 @@ public class FireRingAbilityHandler : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemigo"))
+        if (other.CompareTag("Enemy"))
         {
-            IHealthHandler healthHandler = other.gameObject.GetComponent<IHealthHandler>();
-            if (healthHandler != null)
-            {
-                healthHandler.TakeDamage(damageInitial);
-                var burnStae = new BurnState(damageOverTime, damageOverTimeDuration);
-                other.GetComponent<Enemy>()?.AddSecondaryState(burnStae);
-            }
+            Enemy enemy = other.GetComponent<Enemy>();
+            var confusionState = new ConfusionState(stateDuration, enemy);
+            enemy.SetState(confusionState);
         }
     }
 }
