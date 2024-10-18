@@ -2,20 +2,24 @@ using UnityEngine;
 
 public class FanRangeEnemy : Enemy
 {
-    private WeaponInstrument weaponInstrument;
     private IMovementHandler movementHandler;
     private IShootHandler shootHandler;
     private IFirepointHandler firepointHandler;
     [SerializeField] private Transform firepoint;
     [SerializeField] float firepointDistance;
     [SerializeField] float evadeDistance;
+    [SerializeField] Stat attackSpeed;
+    [SerializeField] Stat bulletSpeed;
+    [SerializeField] private WeaponInstrument weaponInstrument;
+    public Stat AttackSpeed => attackSpeed;
+    public Stat BulletSpeed => bulletSpeed;
+
 
     protected override void Awake()
     {
         base.Awake();
         Rigidbody rigidbody = GetComponent<Rigidbody>();
         movementHandler = new RigidbodyMovementHandler(rigidbody);
-        weaponInstrument = GetComponent<WeaponInstrument>();
         playerDetectionHandler = GetComponent<PlayerDetectionHandler>();
         shootHandler = new ShootHandler(firepoint);
         firepointHandler = new FirepointHandler(firepoint, transform, firepointDistance);
@@ -24,10 +28,10 @@ public class FanRangeEnemy : Enemy
     public override void Update()
     {
         base.Update();
-
+        shootHandler.Update();
         if (playerDetectionHandler.IsPlayerInRange(transform.position) && playerDetectionHandler != null)
         {
-            Vector3 playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+            Vector3 playerPosition = Player.Instance.playerTransform.position;
             float distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
 
             if (distanceToPlayer <= evadeDistance)
@@ -37,7 +41,7 @@ public class FanRangeEnemy : Enemy
             else
             {
                 Move(Vector3.zero);
-                SetState(new AttackState(GameObject.FindGameObjectWithTag("Player").transform));
+                SetState(new AttackState(Player.Instance.playerTransform));
             }
         }
         else if (playerDetectionHandler.IsEnabled())
@@ -47,14 +51,14 @@ public class FanRangeEnemy : Enemy
     }
     public override void Move(Vector3 direction)
     {
-        movementHandler.Move(direction, Speed);
+        movementHandler.Move(direction, MoveSpeed.Value);
     }
 
     public void Shoot(Vector3 targetPosition)
     {
         if (shootHandler.CanShoot())
         {
-            shootHandler.Shoot(targetPosition, weaponInstrument, Damage);
+            shootHandler.Shoot(targetPosition, weaponInstrument, Damage.Value,attackSpeed.Value,bulletSpeed.Value);
         }
     }
 

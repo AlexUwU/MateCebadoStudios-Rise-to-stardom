@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1358787705132922358}
   - component: {fileID: 2428047731259347391}
   - component: {fileID: 8077144913058378239}
-  - component: {fileID: 7478218320303927442}
+  - component: {fileID: 4353980690283862025}
   m_Layer: 0
   m_Name: ProyectilProtagonista
   m_TagString: ProyectilProtagonista
@@ -115,7 +115,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7478218320303927442
+--- !u!114 &4353980690283862025
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,10 +124,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 919323602001919846}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a5574697f838fd41ada320c04b6e596, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f698789a3407e840a8a8544bcfdc952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  lifetime: 5
-  damage: 3
-  objetivo: {fileID: 0}
+  lifetime: 3
+  damage: 0

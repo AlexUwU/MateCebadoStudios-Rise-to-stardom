@@ -24,7 +24,7 @@ public abstract class BossPhaseState : IEnemyState
         {
             if (boss.playerDetectionHandler.IsPlayerInRange(enemy.transform.position))
             {
-                boss.AimAndShoot(boss.objetivo.position);
+                boss.AimAndShoot(Player.Instance.transform.position);
                 UseAbilities(boss.CurrentAbilities, enemy);
             }
         }

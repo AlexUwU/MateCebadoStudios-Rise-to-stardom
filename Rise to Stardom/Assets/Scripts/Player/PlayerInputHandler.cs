@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PLayerInputHandler : IInputHandler
+public class PlayerInputHandler : IInputHandler
 {
     public Vector3 GetInputMovement()
     {

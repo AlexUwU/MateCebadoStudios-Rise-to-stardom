@@ -4,57 +4,54 @@ using UnityEngine;
 
 public class Boss : Enemy
 {
-
-    public GameBehaviour stateBoss;
-
     private IMovementHandler movementHandler;
-    private WeaponInstrument weaponInstrument;
     private IShootHandler shootHandler;
     private IFirepointHandler firepointHandler;
+    [SerializeField] public WeaponInstrument weaponInstrument;
+    [SerializeField] Stat attackSpeed;
+    [SerializeField] Stat bulletSpeed;
 
-    [SerializeField] private Transform firepoint;
+    [SerializeField] public Transform firepoint;
     [SerializeField] float firepointDistance;
     [SerializeField] private List<EnemyAbility> phase1Abilities;
     [SerializeField] private List<EnemyAbility> phase2Abilities;
     [SerializeField] private List<EnemyAbility> phase3Abilities;
     private int currentPhase = 1;
 
-    private new IHealthHandler healthHandler;
+    private IHealthHandler healthHandler;
     private float maxHealth;
     [SerializeField] private float phase2Threshold;
     [SerializeField] private float phase3Threshold;
 
+    public Stat AttackSpeed => attackSpeed;
+    public Stat BulletSpeed => bulletSpeed;
     public int CurrentPhase { get { return currentPhase; } }
     public List<IEnemyAbility> CurrentAbilities { get; private set; }
     public List<EnemyAbility> Phase1Abilities { get { return phase1Abilities; } }
     public List<EnemyAbility> Phase2Abilities { get { return phase2Abilities; } }
     public List<EnemyAbility> Phase3Abilities { get { return phase3Abilities; } }
 
-
     public override void Start()
     {
         base.Start();
-        stateBoss = FindObjectOfType<GameBehaviour>();
+        maxHealth = Health.Value;
     }
     protected override void Awake()
     {
         base.Awake();
         Rigidbody rigidbody = GetComponent<Rigidbody>();
         movementHandler = new RigidbodyMovementHandler(rigidbody);
-        weaponInstrument = GetComponent<WeaponInstrument>();
         playerDetectionHandler = GetComponent<PlayerDetectionHandler>();
         shootHandler = new ShootHandler(firepoint);
         firepointHandler = new FirepointHandler(firepoint, transform, firepointDistance);
         AttackBehaviour = new BossAttackBehaviour(this); ;
 
         SetPhase(currentPhase);
-
-        healthHandler = GetComponent<HealthHandler>();
-        maxHealth = healthHandler.Health;
     }
     public override void Update()
     {
         base.Update();
+        shootHandler.Update();
 
         if (ChangePhase())
         {
@@ -65,13 +62,13 @@ public class Boss : Enemy
 
     public override void Move(Vector3 direction)
     {
-        movementHandler.Move(direction, Speed);
+        movementHandler.Move(direction, MoveSpeed.Value);
     }
     public void Shoot(Vector3 targetPosition)
     {
         if (shootHandler.CanShoot())
         {
-            shootHandler.Shoot(targetPosition, weaponInstrument, Damage);
+            shootHandler.Shoot(targetPosition, weaponInstrument, Damage.Value,attackSpeed.Value,bulletSpeed.Value);
         }
     }
     public void AimAndShoot(Vector3 targetPosition)
@@ -110,7 +107,7 @@ public class Boss : Enemy
     }
     private bool ChangePhase()
     {
-        float currentHealth = healthHandler.Health;
+        float currentHealth = Health.Value;
 
         float phase2Change = phase2Threshold * maxHealth;
         float phase3Change = phase3Threshold * maxHealth;
@@ -121,7 +118,6 @@ public class Boss : Enemy
         }
         else if (currentHealth <= phase3Change && currentPhase < 3)
         {
-            stateBoss.boss = true;
             return true;
         }
 

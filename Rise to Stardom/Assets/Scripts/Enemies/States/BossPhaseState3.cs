@@ -14,8 +14,8 @@ public class BossPhase3State : BossPhaseState
     public override void UpdateState(Enemy enemy)
     {
         base.UpdateState(enemy);
-        Vector3 direction = (enemy.objetivo.transform.position - enemy.transform.position).normalized;
-        enemy.Speed = 3f;
+        Vector3 direction = (GameObject.FindGameObjectWithTag("Player").transform.position - enemy.transform.position).normalized;
+        enemy.MoveSpeed.BaseValue = 3f;
         enemy.Move(direction);
         //Debug.Log("Phase3");
     }
