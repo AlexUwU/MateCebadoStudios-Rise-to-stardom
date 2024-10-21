@@ -46,7 +46,7 @@ public class FanRangeEnemy : Enemy
         }
         else if (playerDetectionHandler.IsEnabled())
         {
-            SetState(new IdleState());
+            SetState(new ReturnInitialPositionState());
         }
     }
     public override void Move(Vector3 direction)

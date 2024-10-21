@@ -11,7 +11,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     public Stat Health => health;
     public Stat MoveSpeed => moveSpeed;
     public Stat Damage => damage;
-    public Vector3 InitialPosition { get { return initialPosition; } }
+    public Vector3 InitialPosition { get { return initialPosition; } set { initialPosition = value; } }
     public IAttackBehaviour AttackBehaviour { get; set; }
 
     public IPlayerDetectionHandler playerDetectionHandler;

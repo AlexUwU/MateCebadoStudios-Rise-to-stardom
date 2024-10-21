@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DefeatPoints : MonoBehaviour
 {
-    [SerializeField] private Transform[] points;
-    public Transform[] Points { get { return points; } }
+    [SerializeField]private List<Transform> points = new List<Transform>();
+    public List<Transform> Points { get { return points; } }
     public Transform GetNearestPoint(Vector3 position)
     {
         Transform nearestPoint = null;
@@ -22,5 +22,12 @@ public class DefeatPoints : MonoBehaviour
         }
 
         return nearestPoint;
+    }
+    public void AddPoint(Transform newPoint)
+    {
+        if (!points.Contains(newPoint))
+        {
+            points.Add(newPoint);
+        }
     }
 }

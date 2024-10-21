@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3806065635536018398}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.67, y: 0.5, z: -6.619999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7937316333140184108}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &3806065635536018399
 BoxCollider:
@@ -41,9 +41,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3806065635536018398}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 4.0298047, y: 1, z: 0.52624416}
   m_Center: {x: -0.32783484, y: 0, z: -0.86781454}
 --- !u!114 &3806065635536018397
@@ -77,6 +85,7 @@ GameObject:
   - component: {fileID: 3806065635736721040}
   - component: {fileID: 3806065635736721043}
   - component: {fileID: 3806065635736721055}
+  - component: {fileID: 7389234037851354515}
   m_Layer: 0
   m_Name: PuertaBlokeo (1)
   m_TagString: Untagged
@@ -91,13 +100,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3806065635736721042}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 3, y: 0.5, z: 7.25}
   m_LocalScale: {x: 1, y: 1, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7937316333140184108}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &3806065635736721041
 MeshFilter:
@@ -157,9 +166,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3806065635736721042}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3806065635736721055
@@ -177,6 +194,21 @@ MonoBehaviour:
   move: 0
   distance: 0
   gameManager: {fileID: 0}
+  enemySpawner: {fileID: 7389234037851354515}
+--- !u!114 &7389234037851354515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3806065635736721042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1b0df9b7d5bf442923cbeb02e00e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 0}
+  centerPoint: {fileID: 0}
 --- !u!1 &3806065636107319601
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,6 +222,7 @@ GameObject:
   - component: {fileID: 3806065636107319615}
   - component: {fileID: 3806065636107319614}
   - component: {fileID: 3806065636107319610}
+  - component: {fileID: 8428962293824948662}
   m_Layer: 0
   m_Name: PuertaBlokeo (2)
   m_TagString: Untagged
@@ -204,13 +237,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3806065636107319601}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -9, y: 0.5, z: 26.75}
   m_LocalScale: {x: 1, y: 1, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7937316333140184108}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &3806065636107319612
 MeshFilter:
@@ -270,9 +303,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3806065636107319601}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3806065636107319610
@@ -290,6 +331,21 @@ MonoBehaviour:
   move: 0
   distance: 0
   gameManager: {fileID: 0}
+  enemySpawner: {fileID: 8428962293824948662}
+--- !u!114 &8428962293824948662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3806065636107319601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1b0df9b7d5bf442923cbeb02e00e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 0}
+  centerPoint: {fileID: 0}
 --- !u!1 &3806065636293508811
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,6 +359,7 @@ GameObject:
   - component: {fileID: 3806065636293508809}
   - component: {fileID: 3806065636293508808}
   - component: {fileID: 3806065636293508820}
+  - component: {fileID: 901652783772912131}
   m_Layer: 0
   m_Name: PuertaBlokeo (3)
   m_TagString: Untagged
@@ -317,13 +374,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3806065636293508811}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -9, y: 0.5, z: -12.25}
   m_LocalScale: {x: 1, y: 1, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7937316333140184108}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &3806065636293508822
 MeshFilter:
@@ -383,9 +440,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3806065636293508811}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3806065636293508820
@@ -403,6 +468,21 @@ MonoBehaviour:
   move: 0
   distance: 0
   gameManager: {fileID: 0}
+  enemySpawner: {fileID: 901652783772912131}
+--- !u!114 &901652783772912131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3806065636293508811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1b0df9b7d5bf442923cbeb02e00e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 0}
+  centerPoint: {fileID: 0}
 --- !u!1 &3806065636754959377
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,6 +496,7 @@ GameObject:
   - component: {fileID: 3806065636754959391}
   - component: {fileID: 3806065636754959390}
   - component: {fileID: 3806065636754959386}
+  - component: {fileID: 4963672841319417650}
   m_Layer: 0
   m_Name: PuertaBlokeo
   m_TagString: Untagged
@@ -430,13 +511,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3806065636754959377}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -21, y: 0.5, z: 7.25}
   m_LocalScale: {x: 1, y: 1, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7937316333140184108}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3806065636754959388
 MeshFilter:
@@ -496,9 +577,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3806065636754959377}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3806065636754959386
@@ -516,6 +605,21 @@ MonoBehaviour:
   move: 0
   distance: 0
   gameManager: {fileID: 0}
+  enemySpawner: {fileID: 4963672841319417650}
+--- !u!114 &4963672841319417650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3806065636754959377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1b0df9b7d5bf442923cbeb02e00e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 0}
+  centerPoint: {fileID: 0}
 --- !u!1 &7248892001844617477
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,6 +644,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7248892001844617477}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -31.76, y: 0, z: 57}
   m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000002}
@@ -551,7 +656,6 @@ Transform:
   - {fileID: 3806065636107319613}
   - {fileID: 3806065636293508823}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &4799406422677015098
 MonoBehaviour:
