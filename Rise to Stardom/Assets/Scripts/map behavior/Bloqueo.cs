@@ -8,6 +8,7 @@ public class Bloqueo : MonoBehaviour
     public float move;
     public float distance;
     public GameBehaviour gameManager;
+    public EnemySpawner enemySpawner;
     void Start()
     {
         move = 0.5f * Time.deltaTime;
@@ -21,7 +22,7 @@ public class Bloqueo : MonoBehaviour
             MoveDoor();
 
         }
-        if (distance>2.5)
+        if (distance>2.5 )
         {
             DestroyBlocking();
         }
@@ -31,9 +32,9 @@ public class Bloqueo : MonoBehaviour
     {
         transform.Translate(move, 0, 0);
         distance += move;
-        Debug.Log(distance);
+        //Debug.Log(distance);
 
-        if (distance>2.5)
+        if (distance>2.5 && !gameManager.enemiesSpawnedInRoom)
         {
             CreateEnemy();
         }
@@ -51,10 +52,10 @@ public class Bloqueo : MonoBehaviour
     {
         if (gameManager.estPuertas)
         {
-            gameManager.roomEnemy++;
-            Debug.Log("enemy" + gameManager.roomEnemy);
+            //gameManager.roomEnemy++;
+            //Debug.Log("enemy" + gameManager.roomEnemy);
+            enemySpawner.SpawnEnemies();
+            gameManager.enemiesSpawnedInRoom = true;
         }
     }
-
-
 }
