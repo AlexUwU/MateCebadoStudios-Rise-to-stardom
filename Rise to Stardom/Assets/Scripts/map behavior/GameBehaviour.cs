@@ -8,6 +8,7 @@ public class GameBehaviour : MonoBehaviour
     public bool estPuertas = false;
     public int roomEnemy;
     public bool boss;
+    public bool enemiesSpawnedInRoom = false;
 
     public HUD hud;
 
@@ -45,5 +46,15 @@ public class GameBehaviour : MonoBehaviour
         hud.UpdateCoins(Coins);
     }
 
-
+    public void IncrementEnemyCount()
+    {
+        roomEnemy++;
+    }
+    public void DecrementEnemyCount()
+    {
+        if (roomEnemy > 0)
+        {
+            roomEnemy--;
+        }
+    }
 }
