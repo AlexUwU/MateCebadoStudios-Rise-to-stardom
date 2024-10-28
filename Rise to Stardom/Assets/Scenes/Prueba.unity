@@ -1096,13 +1096,25 @@ PrefabInstance:
       propertyPath: bulletSpeed.baseValue
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4430194839343863476, guid: 99aac37b6bc5e5f4d98abc0c3625f84b, type: 3}
+      propertyPath: phase1Abilities.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430194839343863476, guid: 99aac37b6bc5e5f4d98abc0c3625f84b, type: 3}
+      propertyPath: phase1Abilities.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 180378e10cf3499418fb62873f1e0e4f, type: 2}
+    - target: {fileID: 4430194839343863476, guid: 99aac37b6bc5e5f4d98abc0c3625f84b, type: 3}
+      propertyPath: phase1Abilities.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 180378e10cf3499418fb62873f1e0e4f, type: 2}
     - target: {fileID: 4430194839343863478, guid: 99aac37b6bc5e5f4d98abc0c3625f84b, type: 3}
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 4430194839343863478, guid: 99aac37b6bc5e5f4d98abc0c3625f84b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4430194839343863478, guid: 99aac37b6bc5e5f4d98abc0c3625f84b, type: 3}
       propertyPath: m_TagString
