@@ -2,20 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "FanShootAbility", menuName = "EnemyAbility/FanShootAbility")]
-public class FanShootAbility : EnemyAbility
+[CreateAssetMenu(fileName = "CircleShootAbility", menuName = "EnemyAbility/CircleShootAbility")]
+public class CircleShootAbility : EnemyAbility
 {
     [SerializeField] private int numberOfBullets;
-    [SerializeField] private float spreadAngle;
     [SerializeField] private float cooldown;
-    [SerializeField] bool isEnabled;
+    [SerializeField] private bool isEnabled;
     private Coroutine cooldownCoroutine;
 
-    public FanShootAbility(int numberOfBullets, float spreadAngle)
+    public CircleShootAbility(int numberOfBullets)
     {
         this.numberOfBullets = numberOfBullets;
-        this.spreadAngle = spreadAngle;
     }
+
     public override void Use(Enemy enemy)
     {
         if (CanUse())
@@ -26,17 +25,14 @@ public class FanShootAbility : EnemyAbility
             Transform firePoint = boss.firepoint;
             if (firePoint == null) return;
 
-            boss.Aim(Player.Instance.transform.position);
-            
-            float angleStep = spreadAngle / (numberOfBullets-1);
-            float angle = -spreadAngle / 2;
+            float angleStep = 360f / numberOfBullets;
+            float angle = 0f;
 
             for (int i = 0; i < numberOfBullets; i++)
             {
-                Vector3 directionToPlayer = (GameObject.FindGameObjectWithTag("Player").transform.position - firePoint.position).normalized;
-                Vector3 direction = Quaternion.Euler(0, angle, 0) * directionToPlayer;
+                Vector3 direction = Quaternion.Euler(0, angle, 0) * Vector3.forward;
 
-                GameObject bullet = GameObject.Instantiate(boss.weaponInstrument.bulletNotePrefab, firePoint.position, Quaternion.identity);
+                GameObject bullet = GameObject.Instantiate(boss.weaponInstrument.bulletNotePrefab, boss.transform.position, Quaternion.identity);
                 Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
                 if (bulletRigidbody != null)
                 {
@@ -55,11 +51,13 @@ public class FanShootAbility : EnemyAbility
             cooldownCoroutine = enemy.StartCoroutine(CooldownCoroutine());
         }
     }
+
     private IEnumerator CooldownCoroutine()
     {
         yield return new WaitForSeconds(cooldown);
         cooldownCoroutine = null;
     }
+
     public override bool CanUse()
     {
         return cooldownCoroutine == null && isEnabled;

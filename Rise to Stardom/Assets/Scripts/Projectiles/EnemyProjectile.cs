@@ -21,8 +21,9 @@ public class EnemyProjectile : BaseProjectile
             if (hitEnemy != null && hitEnemy.enemyStateManager.currentStateName == "ConfusionState")
             {
                 hitEnemy.TakeDamage(damage);
+                Destroy(gameObject);
             }
-            Destroy(gameObject);
+            
         }
     }
 }
