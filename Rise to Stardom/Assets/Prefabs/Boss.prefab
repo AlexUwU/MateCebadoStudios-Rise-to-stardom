@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398921071368088248}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.54, z: 0}
   m_LocalScale: {x: 0.114962235, y: 0.114962235, z: 0.114962235}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4430194839343863472}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6982120021584611940
 SpriteRenderer:
@@ -107,13 +107,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4430194837522769332}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4430194839343863472}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4430194839343863478
 GameObject:
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 4430194839343863485}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Enemigo
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,6 +147,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4430194839343863478}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -23.16, y: 0.5, z: 5.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -155,7 +156,6 @@ Transform:
   - {fileID: 4430194837522769333}
   - {fileID: 8505165171170703823}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4430194839343863475
 MeshFilter:
@@ -215,9 +215,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4430194839343863478}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1.7876419, z: 1}
   m_Center: {x: 0, y: 0.39382094, z: 0}
 --- !u!54 &4430194839343863487
@@ -227,10 +235,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4430194839343863478}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -248,16 +267,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb18ae145367564468cedfbd59c8c44c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  damage: 3
+  health:
+    baseValue: 10
+    modifiers: []
+  moveSpeed:
+    baseValue: 0
+    modifiers: []
+  damage:
+    baseValue: 7
+    modifiers: []
   initialPosition: {x: 0, y: 0, z: 0}
-  objetivo: {fileID: 0}
   enemyStateManager: {fileID: 0}
-  stateBoss: {fileID: 0}
+  weaponInstrument: {fileID: 11400000, guid: 40e7fd2012d7f5b4d9b9bfe5d6aa5b87, type: 2}
+  attackSpeed:
+    baseValue: 1
+    modifiers: []
+  bulletSpeed:
+    baseValue: 3
+    modifiers: []
   firepoint: {fileID: 4430194837522769333}
   firepointDistance: 1
   phase1Abilities:
-  - {fileID: 11400000, guid: a7fff8715893f9b42a76ceae2b12f548, type: 2}
+  - {fileID: 11400000, guid: 180378e10cf3499418fb62873f1e0e4f, type: 2}
   phase2Abilities:
   - {fileID: 11400000, guid: a7fff8715893f9b42a76ceae2b12f548, type: 2}
   - {fileID: 11400000, guid: 334bd846fb9b067488bbe1f874a66ab6, type: 2}
@@ -280,6 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48e4cf8bfd46f41488d0416474da2f65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStateName: 
 --- !u!114 &4430194839343863473
 MonoBehaviour:
   m_ObjectHideFlags: 0
