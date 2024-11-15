@@ -1457,6 +1457,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5077369882951719714, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
+      propertyPath: damage.baseValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077369882951719714, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
+      propertyPath: noteSpeed.baseValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077369882951719714, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
+      propertyPath: attackSpeed.baseValue
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5414113735454235642, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.07
@@ -1467,7 +1479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5414113735454235642, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2.91
       objectReference: {fileID: 0}
     - target: {fileID: 5414113735454235642, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7747,7 +7759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1318665679
 MonoBehaviour:
   m_ObjectHideFlags: 0

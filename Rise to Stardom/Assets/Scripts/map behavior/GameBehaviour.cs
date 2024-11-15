@@ -27,6 +27,11 @@ public class GameBehaviour : MonoBehaviour
         {
             SceneManager.LoadScene(3);
         }
+
+        if (Player.Instance.PlayerStats.CurrentHealth <= 0)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 
     private void Awake()
