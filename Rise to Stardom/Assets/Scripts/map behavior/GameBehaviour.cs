@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameBehaviour : MonoBehaviour
 {
+    [SerializeField] Camera cam;
+    public Transform inicioSala;
     public bool estPuertas = false;
     public int roomEnemy;
     public bool boss;
@@ -18,6 +20,7 @@ public class GameBehaviour : MonoBehaviour
     {
         boss = false;
         roomEnemy = 0;
+        cam.transform.LookAt(inicioSala);
     }
 
     void Update()
