@@ -152,10 +152,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health:
-    baseValue: 2
+    baseValue: 10
     modifiers: []
   moveSpeed:
-    baseValue: 3
+    baseValue: 5
     modifiers: []
   damage:
     baseValue: 5

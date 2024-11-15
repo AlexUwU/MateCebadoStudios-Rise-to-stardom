@@ -159,7 +159,7 @@ MonoBehaviour:
     baseValue: 3
     modifiers: []
   damage:
-    baseValue: 10
+    baseValue: 3
     modifiers: []
   initialPosition: {x: 0, y: 0, z: 0}
   enemyStateManager: {fileID: 0}
@@ -167,7 +167,7 @@ MonoBehaviour:
   firepointDistance: 1
   evadeDistance: 3
   attackSpeed:
-    baseValue: 1
+    baseValue: 2
     modifiers: []
   bulletSpeed:
     baseValue: 3
