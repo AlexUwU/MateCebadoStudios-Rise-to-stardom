@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75810e1dac2be746ba08cdd547f40d1, type: 3}
   m_Name: SpawnEnemyAbilityHeadbanger
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8842510952122453481, guid: 34a65094237467c4da63c11d47c277e5, type: 3}
+  enemyPrefab: {fileID: 5590400634040506520, guid: 460ed44b71d09a34d8bab0932e14c7c4, type: 3}
   numberOfEnemies: 3
   spawnRadius: 5
   spawnInterval: 15
