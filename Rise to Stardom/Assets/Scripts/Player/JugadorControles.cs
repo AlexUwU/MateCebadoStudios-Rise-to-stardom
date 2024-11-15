@@ -15,6 +15,8 @@ public class JugadorControles : MonoBehaviour
     ProtagonistaEstadisticas stad;
     private bool tempo = true;
 
+    private bool disparado = false;
+
     private void Start()
     {
         inventarioUI = inventarioCanvas.GetComponentInChildren<InventarioUI>();
@@ -35,14 +37,21 @@ public class JugadorControles : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hit, 100))
                 {
-                    //No dispara si el daño es 0.
+                    //No dispara si el daï¿½o es 0.
                     if (stad.dmg.GetValor() > 0)
                     {
+                        if(!disparado){
+                        disparado = true;
                         disparar.Disparar(hit, stad.dmg.GetValor(), stad.velProy.GetValor());
                         StartCoroutine(Tempo());
+                        }
                     }
                 }
             }
+        }
+
+        if(Input.GetMouseButtonUp(0)){
+            disparado = false;
         }
         /////////////////////// USAR INSTRUMENTO ///////////////////
         if (Input.GetKeyDown(KeyCode.Q))
