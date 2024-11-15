@@ -29,10 +29,12 @@ public class MenuPausa : MonoBehaviour
     public void MenuPrincipal()
     {
         SceneManager.LoadScene(0);
+        Player.Instance.PlayerStats.CurrentHealth = Player.Instance.PlayerStats.MaxHealth;
     }
 
     public void Reintentar()
     {
         SceneManager.LoadScene(1);
+        Player.Instance.PlayerStats.CurrentHealth = Player.Instance.PlayerStats.MaxHealth;
     }
 }

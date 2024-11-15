@@ -7319,6 +7319,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6666407827216810437, guid: 7d39b1af80408e4418e935ffa0b96209, type: 3}
+      propertyPath: defeatPoints
+      value: 
+      objectReference: {fileID: 2720264486420060135}
+    - target: {fileID: 6666407827216810437, guid: 7d39b1af80408e4418e935ffa0b96209, type: 3}
       propertyPath: enemySpawner
       value: 
       objectReference: {fileID: 8139863862225403966}
@@ -7502,6 +7506,10 @@ PrefabInstance:
       propertyPath: centerPoint
       value: 
       objectReference: {fileID: 603824334091527702}
+    - target: {fileID: 8880791152415494261, guid: 8aaac88cd4a7e6e4b8cc066ca782a48b, type: 3}
+      propertyPath: defeatPoints
+      value: 
+      objectReference: {fileID: 2720264486420060135}
     - target: {fileID: 8880791152415494261, guid: 8aaac88cd4a7e6e4b8cc066ca782a48b, type: 3}
       propertyPath: enemySpawner
       value: 
@@ -7701,6 +7709,10 @@ PrefabInstance:
       propertyPath: centerPoint
       value: 
       objectReference: {fileID: 603824334091527702}
+    - target: {fileID: 3806065635536018397, guid: 5502fb5626088934d89cd41bd889da5c, type: 3}
+      propertyPath: defeatPoints
+      value: 
+      objectReference: {fileID: 2720264486420060135}
     - target: {fileID: 3806065635536018397, guid: 5502fb5626088934d89cd41bd889da5c, type: 3}
       propertyPath: enemySpawner
       value: 
@@ -7992,6 +8004,10 @@ PrefabInstance:
       propertyPath: centerPoint
       value: 
       objectReference: {fileID: 603824334091527702}
+    - target: {fileID: 3558390485505453732, guid: 3a2bfcf3436ef5042b8f88bd513515bb, type: 3}
+      propertyPath: defeatPoints
+      value: 
+      objectReference: {fileID: 2720264486420060135}
     - target: {fileID: 3558390485505453732, guid: 3a2bfcf3436ef5042b8f88bd513515bb, type: 3}
       propertyPath: enemySpawner
       value: 

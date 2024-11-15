@@ -10,9 +10,22 @@ public class DefeatState : IEnemyState
         IsStateActive = true;
         enemy.playerDetectionHandler.SetEnabled(false);
         enemy.Move(Vector3.zero);
-        DefeatPoints defeatPoints = GameObject.FindObjectOfType<DefeatPoints>();
-        nearestPoint = defeatPoints.GetNearestPoint(enemy.transform.position);
+        DefeatPoints[] allDefeatPoints = GameObject.FindObjectsOfType<DefeatPoints>();
+        DefeatPoints validDefeatPoints = null;
 
+        foreach (var defeatPoints in allDefeatPoints)
+        {
+            if (defeatPoints.Points.Count > 0)
+            {
+                validDefeatPoints = defeatPoints;
+                break;
+            }
+        }
+
+        if (validDefeatPoints != null)
+        {
+            nearestPoint = validDefeatPoints.GetNearestPoint(enemy.transform.position);
+        }
     }
 
     public void UpdateState(Enemy enemy)

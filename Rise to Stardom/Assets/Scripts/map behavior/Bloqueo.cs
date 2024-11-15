@@ -45,6 +45,7 @@ public class Bloqueo : MonoBehaviour
         if (gameManager.roomEnemy == 0)
         {
             Destroy(this.gameObject);
+            gameManager.enemiesSpawnedInRoom = false;
             gameManager.estPuertas = false;
         }
     }
