@@ -4,6 +4,8 @@ public class HeadbangerEnemy : Enemy
 {
     private IMovementHandler movementHandler;
 
+    public HUD hud;
+
     [SerializeField] private StunStateConfig stunConfig;
 
 
@@ -44,6 +46,7 @@ public class HeadbangerEnemy : Enemy
             if(playerStats != null)
             {
                 playerStats.CurrentHealth -= Damage.Value;
+                hud.DisabledLives(1);
                 SetState(stunConfig.CreateState());
             }
         }

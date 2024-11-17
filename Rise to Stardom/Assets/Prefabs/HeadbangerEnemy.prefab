@@ -152,13 +152,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health:
-    baseValue: 10
+    baseValue: 30
     modifiers: []
   moveSpeed:
     baseValue: 5
     modifiers: []
   damage:
-    baseValue: 5
+    baseValue: 10
     modifiers: []
   initialPosition: {x: 0, y: 0, z: 0}
   enemyStateManager: {fileID: 0}

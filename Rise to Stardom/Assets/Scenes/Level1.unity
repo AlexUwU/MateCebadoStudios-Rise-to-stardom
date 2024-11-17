@@ -1459,7 +1459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5077369882951719714, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
       propertyPath: damage.baseValue
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5077369882951719714, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
       propertyPath: maxHealth.baseValue
@@ -1471,7 +1471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5077369882951719714, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
       propertyPath: attackSpeed.baseValue
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5414113735454235642, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
       propertyPath: m_LocalPosition.x
