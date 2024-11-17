@@ -150,11 +150,11 @@ Transform:
   m_GameObject: {fileID: 17327436}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4574058, y: -0, z: -0, w: 0.88925815}
-  m_LocalPosition: {x: -0.15269424, y: 10.07, z: -5.8}
+  m_LocalPosition: {x: -5.4726944, y: 10.57, z: -7.0200005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 853744050}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 54.44, y: 0, z: 0}
 --- !u!114 &17327438
 MonoBehaviour:
@@ -507,6 +507,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 927586898}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 261915768}
     - target: {fileID: 6127031324954139497, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.29499912
@@ -761,7 +773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (6)
+      value: Cruze 4-5
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -1030,6 +1042,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 63841620}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 1194548563}
     - target: {fileID: 6127031324954139497, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.26900578
@@ -1284,7 +1308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (7)
+      value: Cruze 7-10
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -1522,9 +1546,6 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5414113735454235642, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 17327437}
-    - targetCorrespondingSourceObject: {fileID: 5414113735454235642, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 290310282}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
@@ -1750,9 +1771,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 1318296461822801908}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 220645068}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (11)
+      value: Cruze 0-13
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -1801,9 +1834,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estPuertas: 0
+  inicioSala: {fileID: 0}
   roomEnemy: 0
   boss: 0
   enemiesSpawnedInRoom: 0
+  cam: {fileID: 17327440}
+  primeraSala: {fileID: 1318296461822801908}
   hud: {fileID: 705184222}
 --- !u!4 &324137793
 Transform:
@@ -2462,9 +2498,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 990630196}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 1916284248}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (15)
+      value: Cruze 3-6
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -2782,9 +2830,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 261915768}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 1182955545}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (16)
+      value: Cruze 5-Treasure
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -2974,9 +3034,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 965704509}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 990630196}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (14)
+      value: Cruze 2-3
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -3778,9 +3850,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 142386008}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 454903820}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (12)
+      value: Cruze 1-14
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -4025,6 +4109,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 1318296461822801908}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 1468337068}
     - target: {fileID: 6127031324954139497, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -4247,7 +4343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (3)
+      value: Cruze 0-12
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -4636,6 +4732,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 220645068}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 454903820}
     - target: {fileID: 6127031324954139497, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.33299732
@@ -4890,7 +4998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (4)
+      value: Cruze 13-14
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -5126,9 +5234,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 142386008}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 1318296461944030609}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (13)
+      value: Cruze 1-11
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -5407,6 +5527,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 142386008}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 965704509}
     - target: {fileID: 6127031324954139497, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.34400034
@@ -5661,7 +5793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (1)
+      value: Cruze 1-2
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -6195,6 +6327,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 990630196}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 1318296461944030609}
     - target: {fileID: 6127031324954139497, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.3760004
@@ -6449,7 +6593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (2)
+      value: Cruze 3-11
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -6713,6 +6857,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 63841620}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 1348048202}
     - target: {fileID: 6127031324954139497, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.29100132
@@ -6967,7 +7123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (8)
+      value: Cruze 7-8
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -9660,6 +9816,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 1318296461822801908}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 142386008}
     - target: {fileID: 6127031324954139497, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -9858,7 +10026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze
+      value: Cruze 0-1
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -10397,6 +10565,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 1348048202}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 1318296461538148417}
     - target: {fileID: 6127031324954139497, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2569971
@@ -10651,7 +10831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (9)
+      value: Cruze 8-9
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -10719,9 +10899,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 1916284248}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 63841620}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (17)
+      value: Cruze 6-7
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -11454,9 +11646,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 63841620}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 1752651216}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (18)
+      value: Cruze 7-Shop
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -11737,6 +11941,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 1318296461538148417}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 1572243125}
     - target: {fileID: 6127031324954139497, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.7069998
@@ -12003,7 +12219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (10)
+      value: Cruze 9-Boss
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -12292,6 +12508,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 17327440}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaOrigen
+      value: 
+      objectReference: {fileID: 990630196}
+    - target: {fileID: 5748131850310106158, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
+      propertyPath: salaDestino
+      value: 
+      objectReference: {fileID: 927586898}
     - target: {fileID: 6127031324954139497, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.36200047
@@ -12546,7 +12774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_Name
-      value: Cruze (5)
+      value: Cruze 3-4
       objectReference: {fileID: 0}
     - target: {fileID: 8160428892390003659, guid: 44b7702e9f0008046abe56c58290e24a, type: 3}
       propertyPath: m_IsActive
@@ -12718,7 +12946,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1318296461822801908}
   m_Layer: 0
-  m_Name: RoomMain
+  m_Name: RoomMain (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15705,3 +15933,4 @@ SceneRoots:
   - {fileID: 2067820551}
   - {fileID: 83939900}
   - {fileID: 1318665680}
+  - {fileID: 17327437}
