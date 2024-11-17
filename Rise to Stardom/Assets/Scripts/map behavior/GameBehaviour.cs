@@ -11,6 +11,9 @@ public class GameBehaviour : MonoBehaviour
     public int roomEnemy;
     public bool boss;
 
+    [SerializeField] Camera cam;
+    [SerializeField] Transform primeraSala;
+
     public HUD hud;
 
     public static GameBehaviour Instance { get; private set; }
@@ -20,7 +23,13 @@ public class GameBehaviour : MonoBehaviour
     {
         boss = false;
         roomEnemy = 0;
+<<<<<<< Updated upstream
         cam.transform.LookAt(inicioSala);
+=======
+        Vector3 camaraPosicionInicial = new Vector3(primeraSala.transform.position.x, primeraSala.transform.position.y+15, primeraSala.transform.position.x-14.5f);
+        cam.transform.position = camaraPosicionInicial;
+        cam.transform.LookAt(primeraSala);
+>>>>>>> Stashed changes
     }
 
     void Update()

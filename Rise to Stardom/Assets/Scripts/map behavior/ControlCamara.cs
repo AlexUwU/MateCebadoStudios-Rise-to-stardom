@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ControlCamara : MonoBehaviour
 {
+<<<<<<< Updated upstream
     public Camera cam;
     public Transform salaActual;
 
@@ -12,11 +13,27 @@ public class ControlCamara : MonoBehaviour
     [SerializeField] private Transform salaTemp;
 
     private bool camaraMovida = false;
+=======
+
+    public Camera cam;
+    public Transform salaOrigen;
+    public Transform salaDestino;
+
+    private Transform salaTemp;
+
+    private bool cambiado;
+
+    private Vector3 vectorTemp;
+>>>>>>> Stashed changes
 
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< Updated upstream
 
+=======
+        cambiado = false;
+>>>>>>> Stashed changes
     }
 
     // Update is called once per frame
@@ -25,6 +42,7 @@ public class ControlCamara : MonoBehaviour
         
     }
 
+<<<<<<< Updated upstream
     void OnTriggerEnter(Collider colision){
         Vector3 temp = new Vector3(salaSiguiente.transform.position.x, salaSiguiente.transform.position.y + 25, salaSiguiente.transform.position.z - 15);
         if (colision.gameObject.tag == "Player" && !camaraMovida){
@@ -56,4 +74,31 @@ public class ControlCamara : MonoBehaviour
     }
 
 
+=======
+    void OnTriggerEnter(Collider target){
+        vectorTemp = new Vector3(salaDestino.transform.position.x, salaDestino.transform.position.y+15, salaDestino.transform.position.z-14);
+        if(target.gameObject.tag == "Player" && !cambiado){
+            if(cam.transform.position == vectorTemp){
+               invertirSalas(); 
+               vectorTemp = new Vector3(salaDestino.transform.position.x, salaDestino.transform.position.y+15, salaDestino.transform.position.z-14);
+            }
+            cam.transform.position = vectorTemp;
+            cam.transform.LookAt(salaDestino);
+            invertirSalas();
+            cambiado = true;
+        }
+    }
+
+    void OnTriggerExit(Collider target){
+        if(target.gameObject.tag == "Player" && cambiado){
+            cambiado = false;
+        }
+    }
+
+    void invertirSalas(){
+        salaTemp = salaDestino;
+        salaDestino = salaOrigen;
+        salaOrigen = salaTemp;
+    }
+>>>>>>> Stashed changes
 }
