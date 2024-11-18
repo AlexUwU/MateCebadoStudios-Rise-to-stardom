@@ -14,6 +14,7 @@ public class PlayerStats : MonoBehaviour
 
     [SerializeField] private int coins;
 
+
     public Stat MoveSpeedStat => moveSpeed;
     public float MoveSpeed => moveSpeed.Value;
     public float AttackSpeed => attackSpeed.Value;
@@ -32,6 +33,10 @@ public class PlayerStats : MonoBehaviour
 
     public void pickupCoin(){
         coins++;
+    }
+
+    public int coinCheck(){
+        return coins;
     }
 
 }

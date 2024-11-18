@@ -1482,6 +1482,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5077369882951719714, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
+      propertyPath: coins
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077369882951719714, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
       propertyPath: damage.baseValue
       value: 10
       objectReference: {fileID: 0}
@@ -1549,6 +1553,17 @@ PrefabInstance:
       addedObject: {fileID: 290310282}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
+--- !u!114 &83939901 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5077369882951719714, guid: 08062a34a6b633a4e833b3eb7755e52f, type: 3}
+  m_PrefabInstance: {fileID: 83939900}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502448438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4a001acb63797e419daccc5658d191d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &142386008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1318296461015162586, guid: d367399543694104e9cd5a5a1a789524, type: 3}
@@ -11211,6 +11226,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 7130489988814465761, guid: 39a0cc193ada0754d866b299a7a180c7, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 83939901}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
