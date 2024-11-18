@@ -162,6 +162,7 @@ MonoBehaviour:
     baseValue: 10
     modifiers: []
   initialPosition: {x: 0, y: 0, z: 0}
+  coinPrefab: {fileID: 2783247079189046992, guid: e9f931aa71ffadb48a937585b04c2875, type: 3}
   enemyStateManager: {fileID: 0}
   firepoint: {fileID: 8009269160909673385}
   firepointDistance: 1
@@ -213,6 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStateName: 
+  coinPrefab: {fileID: 2783247079189046992, guid: e9f931aa71ffadb48a937585b04c2875, type: 3}
 --- !u!1 &8009269160909673386
 GameObject:
   m_ObjectHideFlags: 0

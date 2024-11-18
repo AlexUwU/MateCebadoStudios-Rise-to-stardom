@@ -9,6 +9,7 @@ public class HeadbangerEnemy : Enemy
     [SerializeField] private StunStateConfig stunConfig;
 
 
+
     protected override void Awake()
     {
         base.Awake();

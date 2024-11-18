@@ -8,6 +8,8 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     [SerializeField] private Stat damage;
     [SerializeField] private Vector3 initialPosition;
 
+    public GameObject coinPrefab;
+
     public Stat Health => health;
     public Stat MoveSpeed => moveSpeed;
     public Stat Damage => damage;
@@ -43,7 +45,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     {
         Health.BaseValue -= damage;
         if (Health.Value <= 0)
-        {
+        {   
             Die();
         }
     }
@@ -51,6 +53,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     private void Die()
     {
         SetState(new DefeatState());
+        Instantiate(coinPrefab, transform.position, transform.rotation);
     }
     public void AddSecondaryState(IEnemyState state)
     {

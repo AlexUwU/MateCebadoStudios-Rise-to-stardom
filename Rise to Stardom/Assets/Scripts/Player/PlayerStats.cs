@@ -12,6 +12,8 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private Stat noteSpeed;
     [SerializeField] private Stat noteSize;
 
+    [SerializeField] private int coins;
+
     public Stat MoveSpeedStat => moveSpeed;
     public float MoveSpeed => moveSpeed.Value;
     public float AttackSpeed => attackSpeed.Value;
@@ -23,5 +25,13 @@ public class PlayerStats : MonoBehaviour
         set => currentHealth.BaseValue = Mathf.Clamp(value, 0, maxHealth.Value);
     }
     public float MaxHealth => maxHealth.Value;
+
+    void Start(){
+        coins = 0;
+    }
+
+    public void pickupCoin(){
+        coins++;
+    }
 
 }
