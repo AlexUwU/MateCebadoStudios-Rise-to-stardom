@@ -28,6 +28,19 @@ public class DefeatState : IEnemyState
             nearestPoint = validDefeatPoints.GetNearestPoint(enemy.transform.position);
         }
 
+        foreach (var defeatPoints in allDefeatPoints)
+        {
+            if (defeatPoints.Points.Count > 0)
+            {
+                validDefeatPoints = defeatPoints;
+                break;
+            }
+        }
+
+        if (validDefeatPoints != null)
+        {
+            nearestPoint = validDefeatPoints.GetNearestPoint(enemy.transform.position);
+        }
     }
 
     public void UpdateState(Enemy enemy)

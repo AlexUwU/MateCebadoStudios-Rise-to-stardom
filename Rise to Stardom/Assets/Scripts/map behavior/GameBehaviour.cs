@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class GameBehaviour : MonoBehaviour
 {
     public bool estPuertas = false;
+    public Transform inicioSala;
     public int roomEnemy;
     public bool boss;
     public bool enemiesSpawnedInRoom = false;
-
+    [SerializeField] Camera cam;
+    [SerializeField] Transform primeraSala;
     public HUD hud;
 
     public static GameBehaviour Instance { get; private set; }
@@ -19,13 +21,22 @@ public class GameBehaviour : MonoBehaviour
     {
         boss = false;
         roomEnemy = 0;
+        Vector3 camaraPosicionInicial = new Vector3(primeraSala.transform.position.x, primeraSala.transform.position.y+15, primeraSala.transform.position.x-14.5f);
+        cam.transform.position = camaraPosicionInicial;
+        cam.transform.LookAt(primeraSala);
     }
 
     void Update()
     {
+
         if (boss)
         {
             SceneManager.LoadScene(3);
+        }
+
+        if (Player.Instance.PlayerStats.CurrentHealth <= 0)
+        {
+            SceneManager.LoadScene(2);
         }
     }
 

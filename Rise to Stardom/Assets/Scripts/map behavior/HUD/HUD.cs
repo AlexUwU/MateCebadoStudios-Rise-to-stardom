@@ -9,7 +9,6 @@ public class HUD : MonoBehaviour
     public TextMeshProUGUI coins;
 
     public GameObject corazon;
-    //public GameObject corazonesTransform;
     public int cantLives;
     public PersonajeEstadisticas stadsPj;
 
@@ -24,7 +23,6 @@ public class HUD : MonoBehaviour
     }
     void Update()
     {
-        
         coins.text = GameBehaviour.Instance.Coins.ToString();
     }
     public void UpdateCoins(int Coins)
