@@ -25,7 +25,7 @@ public class HeadbangerEnemy : Enemy
             {
                 SetState(new AttackState(Player.Instance.playerTransform));
             }
-            else
+            else if (enemyStateManager.currentStateName != "IdleState")
             {
                 SetState(new ReturnInitialPositionState());
             }

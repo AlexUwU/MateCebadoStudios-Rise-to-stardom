@@ -18,4 +18,24 @@ public class PlayerInputHandler : IInputHandler
     {
         return Input.GetButton("Fire1");
     }
+
+    public bool IsUsingAbilityWeapon()
+    {
+        return Input.GetKeyDown(KeyCode.Q);
+    }
+
+    public bool IsUsingConsumable()
+    {
+        return Input.GetKeyDown(KeyCode.C);
+    }
+
+    public bool IsSwitchingConsumableLeft()
+    {
+        return Input.GetKeyDown(KeyCode.Z);
+    }
+
+    public bool IsSwitchingConsumableRight()
+    {
+        return Input.GetKeyDown(KeyCode.X);
+    }
 }

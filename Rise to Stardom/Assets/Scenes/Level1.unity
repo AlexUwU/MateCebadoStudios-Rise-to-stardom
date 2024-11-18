@@ -9912,6 +9912,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8139863862225403966, guid: 62d610302a17cb34089d234bf4385828, type: 3}
+      propertyPath: spawnConfigurations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 414910840120909271, guid: 62d610302a17cb34089d234bf4385828, type: 3}
     - {fileID: 414910839732783351, guid: 62d610302a17cb34089d234bf4385828, type: 3}
@@ -11206,6 +11210,10 @@ PrefabInstance:
     - target: {fileID: 9190278206664801959, guid: 62d610302a17cb34089d234bf4385828, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9190278206867796968, guid: 62d610302a17cb34089d234bf4385828, type: 3}
+      propertyPath: puertaBloqueo.Array.size
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6263592496105584635, guid: 62d610302a17cb34089d234bf4385828, type: 3}

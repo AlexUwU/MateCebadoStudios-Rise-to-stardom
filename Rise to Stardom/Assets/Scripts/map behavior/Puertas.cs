@@ -11,8 +11,6 @@ public class Puertas : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameBehaviour>();
-        enemySpawner = FindObjectOfType<EnemySpawner>();
-        defeatPoints = FindObjectOfType<DefeatPoints>();
     }
 
     // Update is called once per frame
