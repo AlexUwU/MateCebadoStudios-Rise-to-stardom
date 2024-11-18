@@ -12,11 +12,15 @@ public class ReturnInitialPositionState : IEnemyState
     public void UpdateState(Enemy enemy)
     {
         Vector3 direction = (enemy.InitialPosition - enemy.transform.position).normalized;
-        enemy.Move(direction);
+        
         if (Vector3.Distance(enemy.transform.position, enemy.InitialPosition) < 0.1f)
         {
-            IsStateActive = false;
             enemy.SetState(new IdleState());
+            IsStateActive = false;
+        }
+        else
+        {
+            enemy.Move(direction);
         }
     }
 

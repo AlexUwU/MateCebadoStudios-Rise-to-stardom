@@ -51,23 +51,23 @@ public class PlayerController : MonoBehaviour
 
             shootHandler.Update();
 
-            if (Input.GetKeyDown(KeyCode.Q) && equippedWeapon.instrumentAbiltity != null)
+            if (inputHandler.IsUsingAbilityWeapon() && equippedWeapon.instrumentAbiltity != null)
             {
                 equippedWeapon.instrumentAbiltity.Activate();
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.C)) 
+        if (inputHandler.IsUsingConsumable()) 
         {
             inventory.GetConsumableManager().UseCurrentConsumable(gameObject);
         }
 
-        if (Input.GetKeyDown(KeyCode.Z)) 
+        if (inputHandler.IsSwitchingConsumableLeft()) 
         {
             inventory.GetConsumableManager().SwitchConsumable(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.X)) 
+        if (inputHandler.IsSwitchingConsumableRight()) 
         {
             inventory.GetConsumableManager().SwitchConsumable(true);
         }

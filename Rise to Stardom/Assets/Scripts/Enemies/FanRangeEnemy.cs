@@ -44,7 +44,7 @@ public class FanRangeEnemy : Enemy
                 SetState(new AttackState(Player.Instance.playerTransform));
             }
         }
-        else if (playerDetectionHandler.IsEnabled())
+        else if (playerDetectionHandler.IsEnabled() && enemyStateManager.currentStateName != "IdleState")
         {
             SetState(new ReturnInitialPositionState());
         }
