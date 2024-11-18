@@ -14,6 +14,9 @@ public class ControlCamara : MonoBehaviour
 
     private Vector3 vectorTemp;
 
+    [SerializeField] ControlMuroCruce muro1Trigger;
+    [SerializeField] ControlMuroCruce muro2Trigger;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +34,10 @@ public class ControlCamara : MonoBehaviour
 
     void OnTriggerEnter(Collider target){
         vectorTemp = new Vector3(salaDestino.transform.position.x, salaDestino.transform.position.y+15, salaDestino.transform.position.z-14);
+        if(target.gameObject.tag=="Player"){
+            muro1Trigger.jugadorDentro();
+            muro2Trigger.jugadorDentro();
+        }
         if(target.gameObject.tag == "Player" && !cambiado){
             if(cam.transform.position == vectorTemp){
                invertirSalas(); 
@@ -44,6 +51,10 @@ public class ControlCamara : MonoBehaviour
     }
 
     void OnTriggerExit(Collider target){
+        if(target.gameObject.tag=="Player"){
+            muro1Trigger.jugadorFuera();
+            muro2Trigger.jugadorFuera();
+        }
         if(target.gameObject.tag == "Player" && cambiado){
             cambiado = false;
         }
