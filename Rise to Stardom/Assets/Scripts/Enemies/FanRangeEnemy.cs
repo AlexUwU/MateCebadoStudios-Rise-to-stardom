@@ -5,6 +5,7 @@ public class FanRangeEnemy : Enemy
     private IMovementHandler movementHandler;
     private IShootHandler shootHandler;
     private IFirepointHandler firepointHandler;
+    
     [SerializeField] private Transform firepoint;
     [SerializeField] float firepointDistance;
     [SerializeField] float evadeDistance;
@@ -71,6 +72,6 @@ public class FanRangeEnemy : Enemy
     public void EvadePlayer(Vector3 playerPosition)
     {
         Vector3 direction = (transform.position - playerPosition).normalized;
-        Move(direction);
+        Move(direction); 
     }
 }

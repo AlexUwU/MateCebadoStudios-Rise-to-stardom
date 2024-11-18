@@ -4,6 +4,8 @@ public class HealthHandler : MonoBehaviour, IHealthHandler
 {
     public GameBehaviour numeroDeEnemigo;
     [SerializeField] private float health;
+
+
     public float Health { get { return health; } }
 
     private void Start()
@@ -15,7 +17,7 @@ public class HealthHandler : MonoBehaviour, IHealthHandler
     {
         health -= damage;
         if (health <= 0)
-        {
+        {   
             Die();
         }
     }
@@ -23,7 +25,7 @@ public class HealthHandler : MonoBehaviour, IHealthHandler
     {
         var enemy = GetComponent<Enemy>();
         if (enemy != null)
-        {
+        {   
             enemy.SetState(new DefeatState());
             Debug.Log(numeroDeEnemigo.roomEnemy);
             numeroDeEnemigo.roomEnemy--;

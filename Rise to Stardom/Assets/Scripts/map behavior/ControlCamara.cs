@@ -34,10 +34,6 @@ public class ControlCamara : MonoBehaviour
 
     void OnTriggerEnter(Collider target){
         vectorTemp = new Vector3(salaDestino.transform.position.x, salaDestino.transform.position.y+15, salaDestino.transform.position.z-14);
-        if(target.gameObject.tag=="Player"){
-            muro1Trigger.jugadorDentro();
-            muro2Trigger.jugadorDentro();
-        }
         if(target.gameObject.tag == "Player" && !cambiado){
             if(cam.transform.position == vectorTemp){
                invertirSalas(); 
