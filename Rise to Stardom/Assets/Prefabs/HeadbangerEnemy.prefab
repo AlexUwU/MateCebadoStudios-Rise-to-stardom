@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5590400634040506526}
   - component: {fileID: 5590400634040506527}
   - component: {fileID: 5980795062522979778}
+  - component: {fileID: 5561124352329130122}
   m_Layer: 0
   m_Name: HeadbangerEnemy
   m_TagString: Enemy
@@ -164,6 +165,7 @@ MonoBehaviour:
   initialPosition: {x: 0, y: 0, z: 0}
   coinPrefab: {fileID: 2783247079189046992, guid: e9f931aa71ffadb48a937585b04c2875, type: 3}
   enemyStateManager: {fileID: 0}
+  sprite: {fileID: 4801841288410949970}
   hud: {fileID: 0}
   stunConfig: {fileID: 11400000, guid: b3f014b526ff7364bb246f972d9eae72, type: 2}
   anim: {fileID: 4408857455008050923}
@@ -207,6 +209,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStateName: 
+--- !u!65 &5561124352329130122
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5590400634040506520}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 3, y: 5, z: 1.0000002}
+  m_Center: {x: 0.000000059604645, y: 1, z: -0.00000008940697}
 --- !u!1 &8341787872322752348
 GameObject:
   m_ObjectHideFlags: 0

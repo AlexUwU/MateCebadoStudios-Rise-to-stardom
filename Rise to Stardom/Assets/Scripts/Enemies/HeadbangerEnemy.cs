@@ -77,10 +77,8 @@ public class HeadbangerEnemy : Enemy
 
         if(transform.position.x > Player.Instance.playerTransform.position.x){
             anim.SetFloat("X", 1);
-            Debug.Log("Player to the left");
         }else if (transform.position.x < Player.Instance.playerTransform.position.x){
             anim.SetFloat("X", -1);
-            Debug.Log("Player to the right");
         }        
        
     }
