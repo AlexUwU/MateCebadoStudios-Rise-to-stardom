@@ -1,0 +1,534 @@
+fileFormatVersion: 2
+guid: 25f44c56728151244b03ae1f38c2725a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: plumarius_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400.889
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029f93026e304594caae20da676f8bf9
+      internalID: -928355892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2100.889
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9771a4deebfa1846976b1b7077e90d7
+      internalID: 11458924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1800.8889
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc13e4f865c2d7d43a90199b758b726b
+      internalID: -1789601273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500.8889
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fb1b52169001145a5806018e8961b7
+      internalID: 1597027548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1500.8889
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436f85b6ca23acd4282699512d04b9b0
+      internalID: 232430640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200.8889
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef986a6afed35634281ef325d176c103
+      internalID: -198005098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_8
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1200.8889
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f8f10e9dfbb2f46b8e105608ac6942
+      internalID: 657292543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_9
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1200.8889
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b438b9b3c115c4381a8b3cc6836ed8
+      internalID: -1155908305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900.8889
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e7a3a60dc7a924685d9f253eeb9632
+      internalID: -2097658446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_11
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 900.8889
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1937303b80e5c69488f21f67ad71ea03
+      internalID: 736941919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_12
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 900.8889
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9296a6992a2720e4a9bc1c3e30ce8f9a
+      internalID: 3145758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600.8889
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f56358741ddce54aa2f8db3059ff190
+      internalID: -1002373588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_14
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 600.8889
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd99047f03079c348a6490aef2ec23ba
+      internalID: -269831973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300.8889
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318712a1e9a6bb245ada7e1d163e5dd9
+      internalID: -540855727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_16
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300.8889
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95166effbe8484f4e9c54bf419d61db6
+      internalID: -2039543943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_17
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 300.8889
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e024368d573c64da04513939cd65e7
+      internalID: 1012701082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.8888855
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d690c22f33acb047b5e30215cba878c
+      internalID: 1893000982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_19
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0.8888855
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db32a85901b94d04cbd9e5264596e020
+      internalID: 1042471777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plumarius_20
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0.8888855
+        width: 300
+        height: 300.1111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc86bec7a033e245a77a765a6c1e362
+      internalID: -477284903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 463c58dcd57179441b08a458b7ab2dea
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      plumarius_0: -928355892
+      plumarius_1: 1222544829
+      plumarius_10: -2097658446
+      plumarius_11: 736941919
+      plumarius_12: 3145758
+      plumarius_13: -1002373588
+      plumarius_14: -269831973
+      plumarius_15: -540855727
+      plumarius_16: -2039543943
+      plumarius_17: 1012701082
+      plumarius_18: 1893000982
+      plumarius_19: 1042471777
+      plumarius_2: -1742345747
+      plumarius_20: -477284903
+      plumarius_3: 11458924
+      plumarius_4: -1789601273
+      plumarius_5: 1597027548
+      plumarius_6: 232430640
+      plumarius_7: -198005098
+      plumarius_8: 657292543
+      plumarius_9: -1155908305
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

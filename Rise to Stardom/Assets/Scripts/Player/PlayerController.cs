@@ -16,6 +16,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform pointer;
     [SerializeField] private float firePointDistance;
 
+    public Animator anim;
+
+    private bool moving;
+
+    private float x;
+    private float y;
+    private Vector2 input;
+
     private void Start()
     {
         inputHandler = new PlayerInputHandler();
@@ -36,6 +44,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        GetInput();
+        Animate();
         Vector3 inputMovement = inputHandler.GetInputMovement();
         float moveSpeed = playerStats.MoveSpeed;
         movementHandler.Move(inputMovement,moveSpeed);
@@ -70,6 +80,37 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X)) 
         {
             inventory.GetConsumableManager().SwitchConsumable(true);
+        }
+    }
+
+    private void GetInput(){
+        x = Input.GetAxisRaw("Horizontal");
+        y = Input.GetAxisRaw("Vertical");
+
+        input = new Vector2(x, y);
+        input.Normalize();
+    }
+
+    private void Animate(){
+        if(input.magnitude > 0.1f || input.magnitude < -0.1f){
+            moving = true;
+        }
+        else{
+        moving = false;
+        }
+
+        if(moving){
+            anim.SetFloat("X", x);
+            anim.SetFloat("Y", y);
+        }
+
+        anim.SetBool("Moving", moving);
+    }
+
+    void OnCollisionEnter(Collision target){
+        if (target.gameObject.tag == "DamageSource" || target.gameObject.tag == "Enemy"){
+            anim.SetTrigger("Hit");
+            Debug.Log("Auch!");
         }
     }
 }

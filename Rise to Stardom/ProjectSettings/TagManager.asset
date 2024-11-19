@@ -15,6 +15,7 @@ TagManager:
   - Transparent
   - DefeatPoint
   - Audio
+  - DamageSource
   layers:
   - Default
   - TransparentFX

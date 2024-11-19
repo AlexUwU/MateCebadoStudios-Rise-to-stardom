@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+
     [SerializeField] private Stat maxHealth;
     [SerializeField] private Stat currentHealth;
     [SerializeField] private Stat damage;
@@ -15,6 +16,8 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private int coins;
 
 
+
+
     public Stat MoveSpeedStat => moveSpeed;
     public float MoveSpeed => moveSpeed.Value;
     public float AttackSpeed => attackSpeed.Value;
@@ -24,6 +27,7 @@ public class PlayerStats : MonoBehaviour
     {
         get => currentHealth.Value;
         set => currentHealth.BaseValue = Mathf.Clamp(value, 0, maxHealth.Value);
+        
     }
     public float MaxHealth => maxHealth.Value;
 
