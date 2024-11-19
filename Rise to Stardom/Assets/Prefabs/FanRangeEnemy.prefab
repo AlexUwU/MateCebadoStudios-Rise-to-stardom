@@ -162,6 +162,9 @@ MonoBehaviour:
     baseValue: 10
     modifiers: []
   initialPosition: {x: 0, y: 0, z: 0}
+  damageSoundClips:
+  - {fileID: 8300000, guid: a8a245d05ebcd0540a321c82424ea286, type: 3}
+  - {fileID: 8300000, guid: cbf10227c4fb6e54286d942fb2fd95b1, type: 3}
   coinPrefab: {fileID: 2783247079189046992, guid: e9f931aa71ffadb48a937585b04c2875, type: 3}
   enemyStateManager: {fileID: 0}
   firepoint: {fileID: 8009269160909673385}
@@ -214,7 +217,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStateName: 
-  coinPrefab: {fileID: 2783247079189046992, guid: e9f931aa71ffadb48a937585b04c2875, type: 3}
 --- !u!1 &8009269160909673386
 GameObject:
   m_ObjectHideFlags: 0

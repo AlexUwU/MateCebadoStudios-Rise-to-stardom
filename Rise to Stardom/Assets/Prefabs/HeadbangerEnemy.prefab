@@ -161,6 +161,9 @@ MonoBehaviour:
     baseValue: 0
     modifiers: []
   initialPosition: {x: 0, y: 0, z: 0}
+  damageSoundClips:
+  - {fileID: 8300000, guid: a8a245d05ebcd0540a321c82424ea286, type: 3}
+  - {fileID: 8300000, guid: cbf10227c4fb6e54286d942fb2fd95b1, type: 3}
   coinPrefab: {fileID: 2783247079189046992, guid: e9f931aa71ffadb48a937585b04c2875, type: 3}
   enemyStateManager: {fileID: 0}
   hud: {fileID: 0}

@@ -6,6 +6,17 @@ using UnityEngine.SceneManagement;
 public class MenuPausa : MonoBehaviour
 {
     [SerializeField] private GameObject menuPausa;
+    private GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player == null)
+        {
+            Debug.LogWarning("No se encontro");
+        }
+    }
     void Update()
     {
         Pausa();
@@ -28,13 +39,22 @@ public class MenuPausa : MonoBehaviour
 
     public void MenuPrincipal()
     {
+        if (player != null)
+        {
+            Destroy(player);
+        }
+
         SceneManager.LoadScene(0);
-        Player.Instance.PlayerStats.CurrentHealth = Player.Instance.PlayerStats.MaxHealth;
     }
 
     public void Reintentar()
     {
+
+        if (player != null)
+        {
+            Destroy(player);
+        }
+
         SceneManager.LoadScene(1);
-        Player.Instance.PlayerStats.CurrentHealth = Player.Instance.PlayerStats.MaxHealth;
     }
 }
