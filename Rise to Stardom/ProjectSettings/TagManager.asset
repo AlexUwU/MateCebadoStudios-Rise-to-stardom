@@ -15,6 +15,10 @@ TagManager:
   - Transparent
   - DefeatPoint
   - Audio
+  - Opciones
+  - Regresar
+  - panelSonido
+  - panelVideo
   layers:
   - Default
   - TransparentFX

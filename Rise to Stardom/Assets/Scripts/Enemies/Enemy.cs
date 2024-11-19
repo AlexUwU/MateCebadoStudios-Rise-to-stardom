@@ -8,6 +8,8 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     [SerializeField] private Stat damage;
     [SerializeField] private Vector3 initialPosition;
 
+    [SerializeField] public AudioClip [] damageSoundClips;
+
     public GameObject coinPrefab;
 
     public Stat Health => health;
@@ -43,6 +45,8 @@ public abstract class Enemy : MonoBehaviour, IDamageable
     }
     public void TakeDamage(float damage)
     {
+        Debug.Log("Recibe daño");
+        SoundFXManager.Instance.PlayRandomSoundFXClip(damageSoundClips, transform, 1f);
         Health.BaseValue -= damage;
         if (Health.Value <= 0)
         {   

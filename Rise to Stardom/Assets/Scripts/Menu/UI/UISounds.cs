@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class UISounds : MonoBehaviour
 {
-    public AudioClip boton;
-
-    AudioManager audioManager;
-
-    private void Awake()
-    {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-    }
+    [SerializeField]private AudioClip boton;
 
     public void ButtonSound()
     {
-        audioManager.PlaySFX(boton);
+        SoundFXManager.Instance.PlaySoundFXClip(boton, transform, 1f);
     }
 
 }
