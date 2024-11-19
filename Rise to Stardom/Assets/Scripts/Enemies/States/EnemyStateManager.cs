@@ -7,6 +7,8 @@ public class EnemyStateManager : MonoBehaviour
     private IEnemyState currentState;
     public string currentStateName;
     private List<IEnemyState> secondaryStates = new List<IEnemyState>();
+
+
     public void SetState(IEnemyState newState, Enemy enemy)
     {
         if (currentState != null)

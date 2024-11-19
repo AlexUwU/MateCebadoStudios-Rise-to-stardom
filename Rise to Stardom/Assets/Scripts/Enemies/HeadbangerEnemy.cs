@@ -8,6 +8,13 @@ public class HeadbangerEnemy : Enemy
 
     [SerializeField] private StunStateConfig stunConfig;
 
+    public Animator anim;
+    private float x;
+
+ 
+
+
+
 
 
     protected override void Awake()
@@ -17,20 +24,24 @@ public class HeadbangerEnemy : Enemy
         movementHandler = new RigidbodyMovementHandler(rigidbody);
         playerDetectionHandler = GetComponent<PlayerDetectionHandler>();
         AttackBehaviour = new HeadbangerAttackBehaviour();
+
     }
 
     public override void Update()
     {
         base.Update();
+        GetInput();
         if(playerDetectionHandler != null && playerDetectionHandler.IsEnabled() )
         {
             if (playerDetectionHandler.IsPlayerInRange(transform.position))
             {
                 SetState(new AttackState(Player.Instance.playerTransform));
+                anim.SetBool("Moving", true);
             }
             else
             {
                 SetState(new ReturnInitialPositionState());
+                anim.SetBool("Moving", false);
             }
         }
     }
@@ -60,5 +71,17 @@ public class HeadbangerEnemy : Enemy
                 TakeDamage(Damage.Value);
             }
         }
+    }
+
+    private void GetInput(){
+
+        if(transform.position.x > Player.Instance.playerTransform.position.x){
+            anim.SetFloat("X", 1);
+            Debug.Log("Player to the left");
+        }else if (transform.position.x < Player.Instance.playerTransform.position.x){
+            anim.SetFloat("X", -1);
+            Debug.Log("Player to the right");
+        }        
+       
     }
 }

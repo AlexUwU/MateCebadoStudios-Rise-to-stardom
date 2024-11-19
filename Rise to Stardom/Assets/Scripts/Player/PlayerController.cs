@@ -110,7 +110,6 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter(Collision target){
         if (target.gameObject.tag == "DamageSource" || target.gameObject.tag == "Enemy"){
             anim.SetTrigger("Hit");
-            Debug.Log("Auch!");
         }
     }
 }
