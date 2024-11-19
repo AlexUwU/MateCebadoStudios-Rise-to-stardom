@@ -11,6 +11,8 @@ public class HeadbangerEnemy : Enemy
     public Animator anim;
     private float x;
 
+    private SpriteRenderer spRenderer;
+
  
 
 
@@ -24,24 +26,24 @@ public class HeadbangerEnemy : Enemy
         movementHandler = new RigidbodyMovementHandler(rigidbody);
         playerDetectionHandler = GetComponent<PlayerDetectionHandler>();
         AttackBehaviour = new HeadbangerAttackBehaviour();
+        this.spRenderer = this.GetComponentInChildren<SpriteRenderer>();
 
     }
 
     public override void Update()
     {
         base.Update();
-        GetInput();
+        this.spRenderer.flipX = Player.Instance.playerTransform.position.x > this.transform.position.x;
         if(playerDetectionHandler != null && playerDetectionHandler.IsEnabled() )
         {
+            anim.SetBool("Moving", true);
             if (playerDetectionHandler.IsPlayerInRange(transform.position))
             {
-                SetState(new AttackState(Player.Instance.playerTransform));
-                anim.SetBool("Moving", true);
+                SetState(new AttackState(Player.Instance.playerTransform)); 
             }
             else
             {
                 SetState(new ReturnInitialPositionState());
-                anim.SetBool("Moving", false);
             }
         }
     }
@@ -73,13 +75,5 @@ public class HeadbangerEnemy : Enemy
         }
     }
 
-    private void GetInput(){
-
-        if(transform.position.x > Player.Instance.playerTransform.position.x){
-            anim.SetFloat("X", 1);
-        }else if (transform.position.x < Player.Instance.playerTransform.position.x){
-            anim.SetFloat("X", -1);
-        }        
-       
-    }
+  
 }

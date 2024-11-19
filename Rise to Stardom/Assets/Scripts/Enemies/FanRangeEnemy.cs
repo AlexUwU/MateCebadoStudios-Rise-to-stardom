@@ -21,6 +21,8 @@ public class FanRangeEnemy : Enemy
     private float x;
     private float y;
 
+    private SpriteRenderer spRenderer;
+
 
     protected override void Awake()
     {
@@ -31,12 +33,14 @@ public class FanRangeEnemy : Enemy
         shootHandler = new ShootHandler(firepoint);
         firepointHandler = new FirepointHandler(firepoint, transform, firepointDistance);
         AttackBehaviour = new FanRangeAttackBehaviour();
+        this.spRenderer = this.GetComponentInChildren<SpriteRenderer>();
     }
     public override void Update()
     {
         base.Update();
         GetInput();
         shootHandler.Update();
+        this.spRenderer.flipX = Player.Instance.playerTransform.position.x > this.transform.position.x;
         if (playerDetectionHandler.IsPlayerInRange(transform.position) && playerDetectionHandler != null)
         {
             Vector3 playerPosition = Player.Instance.playerTransform.position;
