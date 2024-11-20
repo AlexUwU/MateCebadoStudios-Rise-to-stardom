@@ -19,3 +19,4 @@ MonoBehaviour:
   droppedWeaponPrefab: {fileID: 0}
   sounds:
   - {fileID: 8300000, guid: a8a245d05ebcd0540a321c82424ea286, type: 3}
+  - {fileID: 8300000, guid: a8a245d05ebcd0540a321c82424ea286, type: 3}

@@ -26,7 +26,7 @@ public class PersonajeEstadisticas : MonoBehaviour
         Debug.Log(vidaActual);
         if (totalDamage <= vidaMaxima.GetValor())
         {
-            hud.DisabledLives(hud.cantLives);
+            //hud.DisabledLives(hud.cantLives);
             hud.cantLives--;
         }
         if(vidaActual <= 0)

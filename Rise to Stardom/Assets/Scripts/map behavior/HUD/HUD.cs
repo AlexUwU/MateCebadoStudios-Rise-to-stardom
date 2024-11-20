@@ -8,35 +8,43 @@ public class HUD : MonoBehaviour
     public GameObject[] vidas;
     public TextMeshProUGUI coins;
 
-    public GameObject corazon;
-    public int cantLives;
     public PersonajeEstadisticas stadsPj;
-
-    public Estadisticas vidaMaxima;
-
-    public float vidaFaltante = 0;
+    public int cantLives;
+    public float vidaPorCorazon;
 
     void Start()
     {
         stadsPj = FindObjectOfType<PersonajeEstadisticas>();
         cantLives = vidas.Length;
+        vidaPorCorazon = Player.Instance.PlayerStats.MaxHealth / cantLives;
+        UpdateLives();
     }
+
     void Update()
     {
         coins.text = GameBehaviour.Instance.Coins.ToString();
+        UpdateLives();
     }
+
     public void UpdateCoins(int Coins)
     {
         coins.text = Coins.ToString();
     }
 
-    public void DisabledLives(int indice)
+    public void UpdateLives()
     {
-        vidas[indice-1].SetActive(false);
-    }
+        float currentHealth = Player.Instance.PlayerStats.CurrentHealth;
 
-    public void ActivateLives(int indice)
-    {
-        vidas[indice].SetActive(true);
+        for (int i = 0; i < cantLives; i++)
+        {
+            if (currentHealth > i * vidaPorCorazon)
+            {
+                vidas[i].SetActive(true);
+            }
+            else
+            {
+                vidas[i].SetActive(false);
+            }
+        }
     }
 }
