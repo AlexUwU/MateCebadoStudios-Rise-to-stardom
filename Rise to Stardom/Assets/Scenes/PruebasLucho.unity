@@ -174,10 +174,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopRoom
       objectReference: {fileID: 0}
-    - target: {fileID: 7130489988814465761, guid: 39a0cc193ada0754d866b299a7a180c7, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7626166249339547315, guid: 39a0cc193ada0754d866b299a7a180c7, type: 3}
       propertyPath: m_Enabled
       value: 0

@@ -33,14 +33,13 @@ public class ControlCamara : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider target){
-        vectorTemp = new Vector3(salaDestino.transform.position.x, salaDestino.transform.position.y+15, salaDestino.transform.position.z-14);
+        vectorTemp = new Vector3(salaDestino.transform.position.x, salaDestino.transform.position.y+18, salaDestino.transform.position.z-13);
         if(target.gameObject.tag == "Player" && !cambiado){
             if(cam.transform.position == vectorTemp){
                invertirSalas(); 
-               vectorTemp = new Vector3(salaDestino.transform.position.x, salaDestino.transform.position.y+15, salaDestino.transform.position.z-14);
+               vectorTemp = new Vector3(salaDestino.transform.position.x, salaDestino.transform.position.y+18, salaDestino.transform.position.z-13);
             }
             cam.transform.position = vectorTemp;
-            cam.transform.LookAt(salaDestino);
             invertirSalas();
             cambiado = true;
         }
