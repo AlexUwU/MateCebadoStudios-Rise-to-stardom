@@ -22,7 +22,7 @@ public class Cura : MonoBehaviour
             {
                 stadsPj.Curar();
                 hud.cantLives++;
-                hud.ActivateLives(hud.cantLives);
+                //hud.ActivateLives(hud.cantLives);
                 Destroy(this.gameObject);
             }
         }

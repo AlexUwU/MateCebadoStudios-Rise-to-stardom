@@ -60,7 +60,7 @@ public class HeadbangerEnemy : Enemy
             if(playerStats != null)
             {
                 playerStats.CurrentHealth -= Damage.Value;
-                hud.DisabledLives(1);
+                //hud.DisabledLives(1);
                 SetState(stunConfig.CreateState());
             }
         }

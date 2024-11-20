@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5590400634040506527}
   - component: {fileID: 5980795062522979778}
   - component: {fileID: 5561124352329130122}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HeadbangerEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e4535f2d4a18d48b935c9339a747ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 3
+  detectionRange: 15
 --- !u!114 &5980795062522979778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 8229494054620142131}
   - component: {fileID: 4801841288410949970}
   - component: {fileID: 4408857455008050923}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: conejos-sprite_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -217,10 +217,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth:
-    baseValue: 50
+    baseValue: 100
     modifiers: []
   currentHealth:
-    baseValue: 50
+    baseValue: 100
     modifiers: []
   damage:
     baseValue: 10

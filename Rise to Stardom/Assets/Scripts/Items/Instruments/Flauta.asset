@@ -17,3 +17,8 @@ MonoBehaviour:
   fireMode: 1
   instrumentAbiltity: {fileID: 11400000, guid: 21087d771f77c4e44a078155c2d67d2a, type: 2}
   droppedWeaponPrefab: {fileID: 8377631152057256220, guid: ba9d5cfca1cf63d488d0493942e0c902, type: 3}
+  sounds:
+  - {fileID: 8300000, guid: 05d09eef24c79514f921f19a9f2a2fc4, type: 3}
+  - {fileID: 8300000, guid: 0986ab38f1fe1484fbb0113244dfa914, type: 3}
+  - {fileID: 8300000, guid: e52ddfb3a15ab8647932e882e080a189, type: 3}
+  - {fileID: 8300000, guid: e24c086eb8980a445a599fbefa4cd783, type: 3}

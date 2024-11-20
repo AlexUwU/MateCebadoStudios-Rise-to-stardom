@@ -21,9 +21,9 @@ public class GameBehaviour : MonoBehaviour
     {
         boss = false;
         roomEnemy = 0;
-        Vector3 camaraPosicionInicial = new Vector3(primeraSala.transform.position.x, primeraSala.transform.position.y+15, primeraSala.transform.position.x-14.5f);
+        Vector3 camaraPosicionInicial = new Vector3(primeraSala.transform.position.x, primeraSala.transform.position.y+18, primeraSala.transform.position.x-13.5f);
         cam.transform.position = camaraPosicionInicial;
-        cam.transform.LookAt(primeraSala);
+        //cam.transform.LookAt(primeraSala);
     }
 
     void Update()
