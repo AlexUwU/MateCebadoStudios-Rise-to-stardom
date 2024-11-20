@@ -26,6 +26,10 @@ public class MenuPausa : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
+            if (player == null)
+            {
+                player = GameObject.FindGameObjectWithTag("Player");
+            }
             Time.timeScale = 0f;
             menuPausa.SetActive(true);
         }
@@ -39,11 +43,12 @@ public class MenuPausa : MonoBehaviour
 
     public void MenuPrincipal()
     {
+        Time.timeScale = 1f;
         if (player != null)
         {
             Destroy(player);
         }
-
+        menuPausa.SetActive(false);
         SceneManager.LoadScene(0);
     }
 

@@ -19,6 +19,8 @@ TagManager:
   - Regresar
   - panelSonido
   - panelVideo
+  - Damage
+  - DamageSource
   layers:
   - Default
   - TransparentFX

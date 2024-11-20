@@ -7,6 +7,7 @@ public class WeaponInstrument : ScriptableObject, IItem
     public FireMode fireMode;
     public InstrumentAbilityBase instrumentAbiltity;
     public GameObject droppedWeaponPrefab;
+    public AudioClip[] sounds;
 
     public string ItemName => instrumentName;
 
@@ -18,8 +19,15 @@ public class WeaponInstrument : ScriptableObject, IItem
 
         BaseProjectile bulletNoteComponent = bulletNote.GetComponent<BaseProjectile>();
         bulletNoteComponent.damage = damage;
+
+        Sound();
     }
     public void Use() { }
+
+    public void Sound()
+    {
+        //SoundFXManager.Instance.PlayRandomSoundFXClip(sounds, this.transform, 1f);
+    }
 
     public void Drop(Vector3 dropPosition)
     {
