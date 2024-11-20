@@ -27,6 +27,8 @@ public class PlayerStats : MonoBehaviour
     }
     public float MaxHealth => maxHealth.Value;
 
+    public int Coins => coins;
+
     void Start(){
         coins = 0;
     }
