@@ -78,7 +78,7 @@ public abstract class Enemy : MonoBehaviour, IDamageable
 
     private void SetAllCollidersStatus (bool active) {
     foreach(Collider c in GetComponents<Collider> ()) {
-        c.enabled = active;
+        c.isTrigger = active;
     }
 }
 }
