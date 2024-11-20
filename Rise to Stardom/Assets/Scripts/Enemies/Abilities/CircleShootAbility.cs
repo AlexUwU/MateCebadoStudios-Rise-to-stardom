@@ -27,6 +27,7 @@ public class CircleShootAbility : EnemyAbility
 
             float angleStep = 360f / numberOfBullets;
             float angle = 0f;
+            boss.anim.SetTrigger("AreaAttack");
 
             for (int i = 0; i < numberOfBullets; i++)
             {

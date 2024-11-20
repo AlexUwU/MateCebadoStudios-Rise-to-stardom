@@ -12,7 +12,7 @@ public class Inventario : MonoBehaviour
     {
         if(instance != null)
         {
-            Debug.LogWarning("Mas de una instancia de inventario a sido encontrada!!!!!");
+            Debug.LogWarning("Mas de una instancia de inventario ha sido encontrada!!!!!");
             return;
         }
         instance = this;
@@ -29,6 +29,7 @@ public class Inventario : MonoBehaviour
     public List<Equipable> instrumento = new List<Equipable>();
     public List<Equipable> objetos = new List<Equipable>();
 
+
     public void Add(Equipable objeto)
     {
         if (!objeto.isConsumableItem && !objeto.isInstrumentItem && !objeto.isProyectileItem)
@@ -44,7 +45,7 @@ public class Inventario : MonoBehaviour
         {
             if (instrumento.Count >= limite)
             {
-                Debug.Log("Cambio de instrumento");
+            Debug.Log("Cambio de instrumento");
                 RemoverInstrumento();
             }
             instrumento.Add(objeto);
@@ -75,7 +76,6 @@ public class Inventario : MonoBehaviour
     {
         Equipable viejo = instrumento[0];
         instrumento.RemoveRange(0,1);
-
 
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();

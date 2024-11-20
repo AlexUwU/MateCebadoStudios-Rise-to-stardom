@@ -21,6 +21,7 @@ public class FanShootAbility : EnemyAbility
         if (CanUse())
         {
             Boss boss = enemy as Boss;
+            boss.anim.SetTrigger("AreaAttack");
             if (boss == null || boss.weaponInstrument == null) return;
 
             Transform firePoint = boss.firepoint;
