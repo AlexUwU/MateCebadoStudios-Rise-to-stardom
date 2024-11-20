@@ -204,7 +204,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -437,7 +437,6 @@ MonoBehaviour:
   muroActivo: {fileID: 5970472198973586660}
   muroPasivo: {fileID: 3122948530798773002}
   triggerPasivo: {fileID: 4263414345271034990}
-  jugDentro: 0
 --- !u!1 &4263414345271034990
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +558,6 @@ MonoBehaviour:
   muroActivo: {fileID: 3122948530798773002}
   muroPasivo: {fileID: 5970472198973586660}
   triggerPasivo: {fileID: 3505887839619382770}
-  jugDentro: 0
 --- !u!1 &5601537437627135476
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,7 +779,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
