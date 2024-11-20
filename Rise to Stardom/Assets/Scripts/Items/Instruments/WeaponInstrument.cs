@@ -20,13 +20,13 @@ public class WeaponInstrument : ScriptableObject, IItem
         BaseProjectile bulletNoteComponent = bulletNote.GetComponent<BaseProjectile>();
         bulletNoteComponent.damage = damage;
 
-        Sound();
+        Sound(firePoint);
     }
     public void Use() { }
 
-    public void Sound()
+    public void Sound(Transform transform)
     {
-        //SoundFXManager.Instance.PlayRandomSoundFXClip(sounds, this.transform, 1f);
+        SoundFXManager.Instance.PlayRandomSoundFXClip(sounds, transform, 1f);
     }
 
     public void Drop(Vector3 dropPosition)

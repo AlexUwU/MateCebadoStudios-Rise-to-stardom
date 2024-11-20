@@ -22,7 +22,7 @@ public class EnemySpawner : MonoBehaviour
                 for (int i = 0; i < config.enemyCount; i++)
                 {
                     Vector3 directionToCenter = (ellipseVisualizer.centerPoint.position - config.door.transform.position).normalized;
-                    float spawnDistance = 1.0f;
+                    float spawnDistance = 3.0f;
 
                     Vector3 spawnPosition = config.door.transform.position + directionToCenter * spawnDistance;
 

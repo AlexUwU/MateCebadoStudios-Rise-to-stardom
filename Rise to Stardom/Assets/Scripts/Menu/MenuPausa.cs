@@ -7,6 +7,7 @@ public class MenuPausa : MonoBehaviour
 {
     [SerializeField] private GameObject menuPausa;
     private GameObject player;
+    
 
     private void Start()
     {

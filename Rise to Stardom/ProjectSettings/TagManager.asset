@@ -21,6 +21,7 @@ TagManager:
   - panelVideo
   - Damage
   - DamageSource
+  - PanelInicial
   layers:
   - Default
   - TransparentFX
