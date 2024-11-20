@@ -17,7 +17,9 @@ public class SpawnEnemyAbility : EnemyAbility
     public override void Use(Enemy enemy)
     {
         if (CanUse())
-        {
+        {   
+            Boss boss = enemy as Boss;
+            boss.anim.SetTrigger("SummonEnemy");
             enemy.StartCoroutine(SpawnEnemies(enemy));
             cooldownCoroutine = enemy.StartCoroutine(CooldownCoroutine());
         }

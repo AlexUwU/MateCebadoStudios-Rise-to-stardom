@@ -32,6 +32,10 @@ public class Boss : Enemy
     public List<EnemyAbility> Phase2Abilities { get { return phase2Abilities; } }
     public List<EnemyAbility> Phase3Abilities { get { return phase3Abilities; } }
 
+    public Animator anim;
+
+    private SpriteRenderer spRenderer;
+
     public override void Start()
     {
         base.Start();
@@ -46,6 +50,7 @@ public class Boss : Enemy
         shootHandler = new ShootHandler(firepoint);
         firepointHandler = new FirepointHandler(firepoint, transform, firepointDistance);
         AttackBehaviour = new BossAttackBehaviour(this); ;
+        this.spRenderer = this.GetComponentInChildren<SpriteRenderer>();
 
         SetPhase(currentPhase);
     }
@@ -53,6 +58,7 @@ public class Boss : Enemy
     {
         base.Update();
         shootHandler.Update();
+        this.spRenderer.flipX = Player.Instance.playerTransform.position.x > this.transform.position.x;
 
         if (ChangePhase())
         {
@@ -73,7 +79,8 @@ public class Boss : Enemy
         }
     }
     public void AimAndShoot(Vector3 targetPosition)
-    {
+    {   
+        anim.SetTrigger("AimedShot");
         firepointHandler.Aim(targetPosition);
         Shoot(targetPosition);
     }
@@ -92,12 +99,14 @@ public class Boss : Enemy
                 break;
             case 2:
                 newState = new BossPhase2State(this);
+                anim.SetTrigger("Phase2Transformation");
                 break;
             case 3:
                 newState = new BossPhase3State(this);
                 break;
             default:
                 newState = new BossPhase1State(this);
+
                 break;
         }
         SetState(newState);

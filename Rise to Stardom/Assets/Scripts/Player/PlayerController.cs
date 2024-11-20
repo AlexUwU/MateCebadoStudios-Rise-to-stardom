@@ -24,11 +24,17 @@ public class PlayerController : MonoBehaviour
     private float y;
     private Vector2 input;
 
+    private SpriteRenderer spRenderer;
+
+  
+
     private void Start()
     {
         inputHandler = new PlayerInputHandler();
         movementHandler = new RigidbodyMovementHandler(GetComponent<Rigidbody>());
         firepointHandler = new FirepointHandler(firePoint, transform, firePointDistance);
+        this.spRenderer = this.GetComponentInChildren<SpriteRenderer>();
+        
 
         shootHandler = new ShootHandler(firePoint);
 
@@ -43,15 +49,18 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update()
-    {
+    {   
         GetInput();
         Animate();
+
         Vector3 inputMovement = inputHandler.GetInputMovement();
         float moveSpeed = playerStats.MoveSpeed;
         movementHandler.Move(inputMovement,moveSpeed);
 
         Vector3 pointerTargetPosition = pointer.position;
         firepointHandler.Aim(pointerTargetPosition);
+
+       
 
         WeaponInstrument equippedWeapon = inventory.GetWeaponManager().GetEquippedWeapon();
         if (equippedWeapon != null)
@@ -98,7 +107,8 @@ public class PlayerController : MonoBehaviour
             moving = true;
         }
         else
-        {
+        {   
+            this.spRenderer.flipX = pointer.transform.position.x < this.transform.position.x;     
             moving = false;
         }
 
@@ -106,7 +116,10 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetFloat("X", x);
             anim.SetFloat("Y", y);
+            spRenderer.flipX=false;
         }
+
+        
 
         anim.SetBool("Moving", moving);
     }
@@ -117,13 +130,16 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetTrigger("Hit");
             Destroy(target.gameObject);
-            Debug.Log("bala");
             
         }
         else if(target.gameObject.tag == "Enemy")
         {
             anim.SetTrigger("Hit");
-            Debug.Log("enemigo");
         }
+    }
+
+    public void ChangeWeapon(){
+        anim.SetTrigger("InstrumentChange");
+        
     }
 }

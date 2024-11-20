@@ -6,6 +6,8 @@ public class BossAttackBehaviour : IAttackBehaviour
 {
     private Boss boss;
     private List<IEnemyAbility> currentPhaseAbilities;
+
+
     public BossAttackBehaviour(Boss boss)
     {
         this.boss = boss;

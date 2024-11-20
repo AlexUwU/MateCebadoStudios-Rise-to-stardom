@@ -7,6 +7,10 @@ public class WeaponPickupComponent : MonoBehaviour
     [SerializeField] private WeaponInstrument weapon;
     private bool playerInRange = false;
 
+    [SerializeField] private PlayerController player;
+
+    
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -31,6 +35,8 @@ public class WeaponPickupComponent : MonoBehaviour
             if (inventory != null)
             {
                 inventory.GetWeaponManager().SwitchWeapon(weapon, transform.position);
+                player = GameObject.Find("Player").GetComponent<PlayerController>();
+                player.ChangeWeapon();
                 Destroy(gameObject);
             }
         }
