@@ -1,0 +1,822 @@
+fileFormatVersion: 2
+guid: 0b83baecec326e846b7b07071f7170a6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite-pajaro_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e17f1057b5faf42bb91a83682e63f6
+      internalID: -1640333846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 500.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 412af1c15fcaa5b4dbe8803c7cb6976a
+      internalID: -714759225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4906ca92b8350f54b99db3e8de2f996b
+      internalID: -1444464619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_4
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 400.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8d2321277ace04981b3e7434fbf7c6
+      internalID: -1041076833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 400.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88eef64856ec0234291fba078ca0b8f4
+      internalID: 1748486839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 400.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0ff24e374f1b54e92583b829331eaf
+      internalID: -546673482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_7
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c48a11e1c29e8b4a9e0dd55089669b0
+      internalID: 1573438030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_8
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 400.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97126f1072b7aa4585281ef93f671c6
+      internalID: 423656611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_9
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 400.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e09457929f7ef841a7ba84d9f26c18a
+      internalID: 231405658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8505f82878323de4993685336fedb73b
+      internalID: 1191076116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_11
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 300.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57bd356c11bb6e44db5944b3b9e71499
+      internalID: -132991838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_12
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 300.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6851f8560a61b50449fe31d2f8bd8809
+      internalID: -1726233195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_13
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e028520485a47940afec5a2c290401c
+      internalID: 312394037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_14
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 300.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815b5223287e21e45ba19fb2f6b15336
+      internalID: 1001919732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_15
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 300.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 560cf8a6fb918a9459a8748fa797a402
+      internalID: -605780211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_16
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 300.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77daca9180fb96645b030cd529ec24f2
+      internalID: 1015177720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6163450ad31d7ec48878398dcc513d74
+      internalID: -873959217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_18
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200.83334
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2010c1bb5b7dd140a37996b76f941bd
+      internalID: -1448197102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100.833336
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e982bbb8e8fa38419af9f52eb11a9a7
+      internalID: -1483568332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_23
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100.833336
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60966892cd81922478b437c5245c9496
+      internalID: 1849404363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_24
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100.833336
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d8173fa85b46b4186ca5d29cce3645
+      internalID: -11932103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_25
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 100.833336
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f043f0294855d5f4d8b2777e116d95ff
+      internalID: 1802524943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_26
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 100.833336
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b8f2b498c6d4a4cac6028877b97040
+      internalID: 1471608168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_27
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 100.833336
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04938c0d5e3cd3b4ea881bfac13ffada
+      internalID: -250758241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_28
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 100.833336
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15bcf3504835eab40b95ec50394b92ef
+      internalID: 51519970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.8333359
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26aa04eb1bbf11f4db9f060c1482ec6d
+      internalID: -1970705909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_30
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0.8333359
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017409cb133545f44b40412528103b2a
+      internalID: 308306823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_31
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0.8333359
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5dbace562c591429d17332b75a72e0
+      internalID: -760967509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_32
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0.8333359
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bdccf8d55b46e4da34aeb47cd20270
+      internalID: 372338470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_33
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0.8333359
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad21867cf1d10946a5cebedb346daeb
+      internalID: -715766082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_34
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0.8333359
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8125237f15ea2764a8205ab6a42a8c0d
+      internalID: -1492607463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite-pajaro_35
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0.8333359
+        width: 100
+        height: 100.166664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 162d2a439b6dfbd4599512b3eef690b0
+      internalID: -1119297677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 82ccc05fbf9a60d49b03a1e8341c618f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      sprite-pajaro_0: -1640333846
+      sprite-pajaro_1: -714759225
+      sprite-pajaro_10: 1191076116
+      sprite-pajaro_11: -132991838
+      sprite-pajaro_12: -1726233195
+      sprite-pajaro_13: 312394037
+      sprite-pajaro_14: 1001919732
+      sprite-pajaro_15: -605780211
+      sprite-pajaro_16: 1015177720
+      sprite-pajaro_17: -873959217
+      sprite-pajaro_18: -1448197102
+      sprite-pajaro_19: -1696273685
+      sprite-pajaro_2: 843139652
+      sprite-pajaro_20: -2029607958
+      sprite-pajaro_21: 1966807576
+      sprite-pajaro_22: -1483568332
+      sprite-pajaro_23: 1849404363
+      sprite-pajaro_24: -11932103
+      sprite-pajaro_25: 1802524943
+      sprite-pajaro_26: 1471608168
+      sprite-pajaro_27: -250758241
+      sprite-pajaro_28: 51519970
+      sprite-pajaro_29: -1970705909
+      sprite-pajaro_3: -1444464619
+      sprite-pajaro_30: 308306823
+      sprite-pajaro_31: -760967509
+      sprite-pajaro_32: 372338470
+      sprite-pajaro_33: -715766082
+      sprite-pajaro_34: -1492607463
+      sprite-pajaro_35: -1119297677
+      sprite-pajaro_4: -1041076833
+      sprite-pajaro_5: 1748486839
+      sprite-pajaro_6: -546673482
+      sprite-pajaro_7: 1573438030
+      sprite-pajaro_8: 423656611
+      sprite-pajaro_9: 231405658
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

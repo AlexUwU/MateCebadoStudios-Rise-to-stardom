@@ -6,6 +6,8 @@ public class RoomMainBehavior : MonoBehaviour
 {
     public int cantDoors;
     public GameBehaviour gameManager;
+
+    public bool door = false;
     void Start()
     {
         gameManager = FindObjectOfType<GameBehaviour>();
@@ -15,7 +17,7 @@ public class RoomMainBehavior : MonoBehaviour
     void Update()
     {
         //Debug.Log(cantDoors);
-        if (cantDoors == 1 && !gameManager.estPuertas && gameManager.roomEnemy == 0)
+        if (door == true && !gameManager.estPuertas && gameManager.roomEnemy == 0)
         {
             Destroy(this.gameObject);
             Debug.Log(cantDoors);

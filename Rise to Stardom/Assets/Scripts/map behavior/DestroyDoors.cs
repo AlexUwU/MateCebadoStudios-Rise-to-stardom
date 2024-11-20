@@ -29,10 +29,10 @@ public class DestroyDoors : MonoBehaviour
                     if (objeto != null)
                     {
                         Destroy(objeto);
-                        rooms.cantDoors--;
+                        //rooms.cantDoors--;
                     }
                 }
-
+                rooms.door = true;
                 spawnDoors = null;
             }
         }

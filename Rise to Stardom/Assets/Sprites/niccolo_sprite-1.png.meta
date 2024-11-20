@@ -1,0 +1,1016 @@
+fileFormatVersion: 2
+guid: a20b02990f74ff145a7cd0d3305f6b91
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 700
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: niccolo_sprite-1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600.8571
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc8fe6c4b3c22844971634c9f284328
+      internalID: -1513145147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 600.8571
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b1424b755b3794fbc08c9a50eded6d
+      internalID: -521876461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 600.8571
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb641d76d64dbdd479bd5fd60f7cb103
+      internalID: 399015337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 600.8571
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d07c5a8c5b9cb0d4c8b7e6d9288a4f87
+      internalID: -1038221214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 600.8571
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a5a7b3e7bda5c4abb8f544edf0dc0b
+      internalID: -1776756556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 600.8571
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5f64ffae8c5974c83ab7c00e3ebf47
+      internalID: 1772244510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 600.8571
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a0586ae9c454044a57ba3516963c31
+      internalID: 1741840662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271031ad5f27c354d8378ebe30f15b46
+      internalID: -1235971035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_8
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 500.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376bc8e07ab4d104ab86b4f3cebd7efa
+      internalID: 1183346414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_9
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 500.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c398f5a226a1cbb4ba13d4b3e4ea43db
+      internalID: 812436439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_10
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 500.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111fe3823fe791144b883dcf81cf8fbb
+      internalID: -1138047518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_11
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 500.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f92e93098586347be3eeeda4597f41
+      internalID: 1972981892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_12
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 500.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc6216f20140e2947be0328d33ac7638
+      internalID: -273430029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 500.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2350f78f4d6c549b2a42e3e7edf560
+      internalID: -2104383766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47fb12d80b5841441ad4499a9acb452d
+      internalID: -233477240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_15
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 400.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7186ba37589985c4095905241f3f19eb
+      internalID: -2386689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_16
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 400.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86382b58005828949bea946bd745082d
+      internalID: -1763292128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_17
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 400.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b03e5dccbac3b49a3faf45da4930b9
+      internalID: -1421927486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_18
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a9cba47aed1b140a654432e8bcaf98
+      internalID: 1341751831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_19
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 400.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb2ff4297d8b0d443825d6df8901c979
+      internalID: 1798010686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb41bf79b8bcfc42951426fee199ec3
+      internalID: -325753458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_21
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 300.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aee1019592595b40a42d5a411f31add
+      internalID: 11274771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_22
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 300.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7000affb1047c344198d8b6621a8777f
+      internalID: 1368924469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_23
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0adc02ee448c0be438e4d0291a7ce9ab
+      internalID: 217945994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_24
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 300.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 440fedb8a2dbbfd4e8046ffc89f65040
+      internalID: -367673552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_25
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 300.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59151b076c969ad4e9144ca669654b12
+      internalID: 101052519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e0ef226be323a4f87d53d9e6ecd3da
+      internalID: -1605056105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_27
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a050c2f22307cf40859beaba06946d0
+      internalID: -1146013264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_28
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c73ba0409c1f724d9a8cfd2f3d3e967
+      internalID: -944077238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_29
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 200.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060c6c6d0ed4e6347b3e1ddc094553a1
+      internalID: 1027104091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_30
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 506e07d6b26852b4a85d920b1f19430f
+      internalID: 1654813881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_31
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 200.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a571e92b051bb45a76367f5ae4fe4d
+      internalID: 2028479884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_32
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 200.85715
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5c55855fe210b48bc217ac5fd18102
+      internalID: 1422792776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100.85714
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 989d2842c5432fd498643a8faf92b51e
+      internalID: 1252378774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_34
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100.85714
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13cebdaf1982a71478ff0e1da483e52c
+      internalID: 702582389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_35
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100.85714
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1031a0690a1c6f74697b7b15178613aa
+      internalID: -2031459294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_36
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 100.85714
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65091c0ee01821640ab0e331fdbe78d6
+      internalID: 190723119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_37
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 100.85714
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958fa9fca997da4478272da12288c622
+      internalID: -1486794202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_38
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 100.85714
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6433750b9b347814ba9c22925562d938
+      internalID: 56533301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_39
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 100.85714
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b739324147594449c0605a05b2caa6
+      internalID: 1337444777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: niccolo_sprite-1_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.8571396
+        width: 100
+        height: 100.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1da356e18ea36d42bd4fd93ee6891ad
+      internalID: -1746849391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 836cef82156d78d498ceda99c8e2dce1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      niccolo_sprite-1_0: -1513145147
+      niccolo_sprite-1_1: -521876461
+      niccolo_sprite-1_10: -1138047518
+      niccolo_sprite-1_11: 1972981892
+      niccolo_sprite-1_12: -273430029
+      niccolo_sprite-1_13: -2104383766
+      niccolo_sprite-1_14: -233477240
+      niccolo_sprite-1_15: -2386689
+      niccolo_sprite-1_16: -1763292128
+      niccolo_sprite-1_17: -1421927486
+      niccolo_sprite-1_18: 1341751831
+      niccolo_sprite-1_19: 1798010686
+      niccolo_sprite-1_2: 399015337
+      niccolo_sprite-1_20: -325753458
+      niccolo_sprite-1_21: 11274771
+      niccolo_sprite-1_22: 1368924469
+      niccolo_sprite-1_23: 217945994
+      niccolo_sprite-1_24: -367673552
+      niccolo_sprite-1_25: 101052519
+      niccolo_sprite-1_26: -1605056105
+      niccolo_sprite-1_27: -1146013264
+      niccolo_sprite-1_28: -944077238
+      niccolo_sprite-1_29: 1027104091
+      niccolo_sprite-1_3: -1038221214
+      niccolo_sprite-1_30: 1654813881
+      niccolo_sprite-1_31: 2028479884
+      niccolo_sprite-1_32: 1422792776
+      niccolo_sprite-1_33: 1252378774
+      niccolo_sprite-1_34: 702582389
+      niccolo_sprite-1_35: -2031459294
+      niccolo_sprite-1_36: 190723119
+      niccolo_sprite-1_37: -1486794202
+      niccolo_sprite-1_38: 56533301
+      niccolo_sprite-1_39: 1337444777
+      niccolo_sprite-1_4: -1776756556
+      niccolo_sprite-1_40: -1746849391
+      niccolo_sprite-1_5: 1772244510
+      niccolo_sprite-1_6: 1741840662
+      niccolo_sprite-1_7: -1235971035
+      niccolo_sprite-1_8: 1183346414
+      niccolo_sprite-1_9: 812436439
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

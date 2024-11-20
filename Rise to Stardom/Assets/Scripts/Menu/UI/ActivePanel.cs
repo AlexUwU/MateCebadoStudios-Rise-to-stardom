@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class ActivePanel : MonoBehaviour
 {
-    public GameObject objectToDeactivate;  // El objeto que deseas desactivar
-    public GameObject objectToActivate;    // El objeto que deseas activar
+    public GameObject objectToDeactivate;
+    public GameObject objectToActivate;
 
     void Update()
     {

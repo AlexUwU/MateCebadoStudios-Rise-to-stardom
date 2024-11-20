@@ -14,6 +14,14 @@ public class FanRangeEnemy : Enemy
     [SerializeField] private WeaponInstrument weaponInstrument;
     public Stat AttackSpeed => attackSpeed;
     public Stat BulletSpeed => bulletSpeed;
+    
+    public Animator anim;
+    private bool moving;
+
+    private float x;
+    private float y;
+
+    private SpriteRenderer spRenderer;
 
 
     protected override void Awake()
@@ -25,11 +33,14 @@ public class FanRangeEnemy : Enemy
         shootHandler = new ShootHandler(firepoint);
         firepointHandler = new FirepointHandler(firepoint, transform, firepointDistance);
         AttackBehaviour = new FanRangeAttackBehaviour();
+        this.spRenderer = this.GetComponentInChildren<SpriteRenderer>();
     }
     public override void Update()
     {
         base.Update();
+        GetInput();
         shootHandler.Update();
+        this.spRenderer.flipX = Player.Instance.playerTransform.position.x > this.transform.position.x;
         if (playerDetectionHandler.IsPlayerInRange(transform.position) && playerDetectionHandler != null)
         {
             Vector3 playerPosition = Player.Instance.playerTransform.position;
@@ -38,16 +49,21 @@ public class FanRangeEnemy : Enemy
             if (distanceToPlayer <= evadeDistance)
             {
                 SetState(new EvadeState());
+                anim.SetBool("Moving",true);
+                
             }
             else
             {
                 Move(Vector3.zero);
+                anim.SetBool("Moving", false);
+                anim.SetTrigger("Attack");
                 SetState(new AttackState(Player.Instance.playerTransform));
             }
         }
-        else if (playerDetectionHandler.IsEnabled() && enemyStateManager.currentStateName != "IdleState")
+        else if (playerDetectionHandler.IsEnabled())
         {
             SetState(new ReturnInitialPositionState());
+            anim.SetBool("Moving", false);
         }
     }
     public override void Move(Vector3 direction)
@@ -73,5 +89,10 @@ public class FanRangeEnemy : Enemy
     {
         Vector3 direction = (transform.position - playerPosition).normalized;
         Move(direction); 
+    }
+
+    private void GetInput(){
+        x = Input.GetAxisRaw("Horizontal");
+        y = Input.GetAxisRaw("Vertical");
     }
 }
